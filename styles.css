@@ -127,7 +127,7 @@ body {
 
 .about-entity {
     flex: 0 0 200px;
-    margin-right: 20px; /* Space between profile image and content */
+    margin-right: 30px; /* Space between profile image and content */
 }
 
 .about-contents {
@@ -177,4 +177,25 @@ body {
     .about-contents {
         order: -1; /* Move contents below profile image and links */
     }
+}
+
+/* Adjustments for specific requirements */
+
+.container {
+    text-align: left; /* Align text left within container */
+}
+
+.about-entity {
+    margin-right: 25px; /* Adjusted space between profile image and content */
+}
+
+.quarto-about-jolla {
+    margin-top: 30px; /* Space between header and main content */
+}
+
+.footer {
+    margin-top: 50px; /* Space above footer */
+    text-align: center;
+    font-size: 14px; /* Small font size for copyright notice */
+    color: #888;
 }
