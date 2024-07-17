@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devendraraj Madhanagopal</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Include any additional CSS or fonts here -->
+    <link rel="stylesheet" href="styles-dark.css">
     <style>
         /* General styles */
         body {
@@ -80,54 +80,72 @@
         }
 
         /* Profile and social links */
+        .about-entity {
+            width: 35%; /* 35% width for profile photo and logos */
+            position: relative; /* Position relative for copyright */
+        }
+
+        .about-entity::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 1px; /* Vertical line */
+            background-color: #ccc;
+            display: block;
+            margin: auto;
+        }
+
         .about-image {
-            width: 200px;
+            width: 100%; /* Full width for profile photo */
             height: auto;
             margin-bottom: 10px;
         }
 
         .about-links {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             gap: 10px;
             margin-top: 15px;
         }
 
         .about-link {
             text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #333;
+            display: block;
+            width: 1cm;
+            height: 1cm;
         }
 
         .about-link img {
-            width: 30px; /* Adjust as needed */
-            height: 30px; /* Adjust as needed */
+            width: 100%; /* Full width for logos */
+            height: auto;
             object-fit: contain;
-            margin-bottom: 5px;
-        }
-
-        /* Main content */
-        .quarto-about-jolla {
-            display: flex;
-            gap: 30px;
-            justify-content: center; /* Center content */
-            text-align: left; /* Align text left */
-            margin-top: 30px; /* Space above main content */
-        }
-
-        .about-entity {
-            flex: 0 0 200px;
-            margin-right: 20px; /* Space between profile image and content */
         }
 
         .about-contents {
-            flex: 1;
+            width: 65%; /* 65% width for intro content */
+            padding-left: 20px; /* Add padding for separation */
+        }
+
+        .quarto-about-jolla {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .quarto-about-jolla p {
+            text-align: left; /* Align text left */
         }
 
         /* Responsive design */
         @media only screen and (max-width: 768px) {
+            .container {
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+
             .navbar {
                 flex-direction: column;
                 align-items: flex-start;
@@ -161,22 +179,38 @@
                 align-items: center; /* Center content */
             }
 
-            .about-entity {
-                margin-right: 0; /* Remove margin for profile image in mobile */
-                margin-bottom: 20px; /* Space below profile image */
+            .about-entity,
+            .about-contents {
+                width: 100%; /* Full width on mobile */
+            }
+
+            .about-entity::after {
+                display: none; /* Hide vertical line on mobile */
+            }
+
+            .about-image {
+                width: 50%; /* Adjust width for profile photo on mobile */
+                margin-bottom: 10px;
+            }
+
+            .about-links {
+                flex-direction: row; /* Align logos horizontally on mobile */
+                justify-content: center;
+            }
+
+            .about-link {
+                margin: 0 5px; /* Adjust margin for logos on mobile */
+            }
+
+            .about-link img {
+                width: 1cm; /* Adjust logo size for mobile */
+                height: 1cm; /* Adjust logo size for mobile */
             }
 
             .about-contents {
-                order: -1; /* Move contents below profile image and links */
+                padding-left: 0; /* Remove padding for intro content on mobile */
+                order: -1; /* Move intro content above profile photo on mobile */
             }
-        }
-
-        /* Footer styles */
-        .footer {
-            margin-top: 50px; /* Space above footer */
-            text-align: center;
-            font-size: 14px; /* Small font size for copyright notice */
-            color: #888;
         }
     </style>
 </head>
@@ -199,7 +233,7 @@
     <main class="container">
         <section class="quarto-about-jolla">
             <div class="about-entity">
-                <img src="photo profile.jpg.jpg" alt="Profile Photo" class="about-image">
+                <img src="profile.jpg" alt="Profile Photo" class="about-image">
                 <div class="about-links">
                     <a href="https://scholar.google.com/citations?user=8R1nWlMAAAAJ" class="about-link"><img src="google-scholar.png" alt="Google Scholar"></a>
                     <a href="https://www.researchgate.net/profile/Devendraraj_Madhanagopal" class="about-link"><img src="researchgate.png" alt="ResearchGate"></a>
@@ -212,15 +246,14 @@
                 <h2 class="quarto-title">Welcome to my website!</h2>
                 <p>Trained as an environmental sociologist, I have conducted research on environmental justice, climate change adaptation, climate policy, climate justice, and the social and political dimensions of climate change. I hold a Ph.D. in Sociology from the Department of Humanities and Social Sciences, Indian Institute of Technology Bombay (Mumbai, India). Since 2019, I have been a faculty member associated with the School of Sustainability at XIM University (Odisha, India).</p>
                 <p>I have published four books, including "Local Adaptation to Climate Change in South India: Challenges and the Future in the Tsunami-hit Coastal Regions" (Routledge, UK) and edited volumes related to climate change, environmental justice, climate justice, and socio-political perspectives of risks. As an academic, I have designed and delivered courses on environmental and social issues, gender, disaster management, sustainable development, environmental science, and public administration and governance programs.</p>
-                <p>I have received several international fellowships and travel grants over the years. I continue to network and collaborate with my peers in the United States, the Netherlands, France, Norway, China, Brazil, South Africa, and Kenya to strengthen my research and teaching. If you are interested in collaborating with me or to know more about my works, or any other queries, please do not hesitate to reach me out at <a href="mailto:devendraraj.mm@gmail.com">devendraraj.mm@gmail.com</a>.</p>
+                <p class="quarto-about-jolla">I have received several international fellowships and travel grants over the years. I continue to network and collaborate with my peers in the United States, the Netherlands, France, Norway, China, Brazil, South Africa, and Kenya to strengthen my research and teaching. If you are interested in collaborating with me or to know more about my works, or any other queries, please do not hesitate to reach me out at <a href="mailto:devendraraj.mm@gmail.com">devendraraj.mm@gmail.com</a>.</p>
+                <p style="font-size: 8px;">Copyright: Devendraraj Madhanagopal, 2024.</p>
             </div>
         </section>
     </main>
 
-    <footer class="footer container">
-        <p>Copyright: Devendraraj Madhanagopal, 2024</p>
+    <footer class="container" style="position: fixed; bottom: 10px; left: 10px; font-size: 6px;">
+        Copyright: Devendraraj Madhanagopal, 2024.
     </footer>
-
-    <!-- Scripts or additional JavaScript can be included here if needed -->
 </body>
 </html>
