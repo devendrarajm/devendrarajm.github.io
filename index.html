@@ -42,7 +42,6 @@
             margin: 0;
             color: #2E4053;
             font-weight: bold;
-            margin-right: 10px;
         }
 
         .navbar-nav {
@@ -61,7 +60,7 @@
             color: #333;
             transition: color 0.3s ease;
             display: block;
-            padding: 10px;
+            padding: 5px 10px;
         }
 
         .nav-link:hover, .nav-link.active {
@@ -111,15 +110,15 @@
 
         .about-links-row {
             display: flex;
-            gap: 10px;
+            gap: 1cm; /* 1 cm spacing between logos */
             justify-content: center;
         }
 
         .about-link {
             text-decoration: none;
             display: block;
-            width: 1cm;
-            height: 1cm;
+            width: 2cm; /* Slightly increased size for logos */
+            height: 2cm;
         }
 
         .about-link img {
@@ -204,6 +203,7 @@
             .about-links-row {
                 flex-direction: row;
                 justify-content: center;
+                gap: 0.5cm; /* 0.5 cm spacing between logos */
             }
 
             .about-link {
@@ -211,21 +211,36 @@
             }
 
             .about-link img {
-                width: 1cm;
-                height: 1cm;
+                width: 1.5cm;
+                height: 1.5cm;
             }
 
             .about-contents {
                 padding-left: 0;
                 order: -1;
             }
+
+            .navbar-brand {
+                order: -2;
+                margin-bottom: 10px;
+            }
+
+            .toggle-button {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                margin-left: 10px;
+            }
         }
 
         .copyright {
-            position: fixed;
-            bottom: 0;
-            left: 0;
             font-size: 8px;
+        }
+
+        .toggle-button {
+            display: none;
         }
     </style>
 </head>
@@ -233,6 +248,7 @@
     <header class="container">
         <nav class="navbar">
             <h1 class="navbar-brand">Devendraraj Madhanagopal</h1>
+            <button class="toggle-button" onclick="toggleNav()">☰</button>
             <ul class="navbar-nav">
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#employment" class="nav-link">Employment</a></li>
@@ -251,13 +267,13 @@
                 <img src="Photo profile.jpg.jpg" alt="Profile Photo" class="about-image">
                 <div class="about-links">
                     <div class="about-links-row">
-                        <a href="https://scholar.google.com/citations?user=8R1nWlMAAAAJ" class="about-link"><img src="google-scholar.png" alt="Google Scholar"></a>
-                        <a href="https://www.researchgate.net/profile/Devendraraj_Madhanagopal" class="about-link"><img src="researchgate.png" alt="ResearchGate"></a>
-                        <a href="https://www.routledge.com/authors/i23171-devendraraj-madhanagopal" class="about-link"><img src="routledge.png" alt="Routledge"></a>
+                        <a href="https://scholar.google.com/citations?user=8R1nWlMAAAAJ" target="_blank" class="about-link"><img src="google-scholar.png" alt="Google Scholar"></a>
+                        <a href="https://www.researchgate.net/profile/Devendraraj_Madhanagopal" target="_blank" class="about-link"><img src="researchgate.png" alt="ResearchGate"></a>
+                        <a href="https://www.routledge.com/authors/i23171-devendraraj-madhanagopal" target="_blank" class="about-link"><img src="routledge.png" alt="Routledge"></a>
                     </div>
                     <div class="about-links-row">
-                        <a href="https://www.futureearthcoasts.org/biography/dr-devendraraj-madhanagopal/" class="about-link"><img src="fes.png" alt="Future Earth Coasts"></a>
-                        <a href="mailto:devendraraj.mm@gmail.com" class="about-link"><img src="gmail.png" alt="Email"></a>
+                        <a href="https://www.futureearthcoasts.org/biography/dr-devendraraj-madhanagopal/" target="_blank" class="about-link"><img src="fes.png" alt="Future Earth Coasts"></a>
+                        <a href="mailto:devendraraj.mm@gmail.com" target="_blank" class="about-link"><img src="gmail.png" alt="Email"></a>
                     </div>
                 </div>
             </div>
@@ -272,12 +288,10 @@
     </main>
 
     <script>
-        const navToggle = document.querySelector('.navbar');
-        const navLinks = document.querySelector('.navbar-nav');
-
-        navToggle.addEventListener('click', () => {
+        function toggleNav() {
+            const navLinks = document.querySelector('.navbar-nav');
             navLinks.classList.toggle('active');
-        });
+        }
     </script>
 </body>
 </html>
