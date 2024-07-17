@@ -19,12 +19,12 @@
         }
 
         .container {
-            max-width: 1000px; /* Adjusted width */
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Center align content */
+            text-align: center;
         }
 
         /* Header styles */
@@ -33,16 +33,16 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 10px;
-            background-color: #fff; /* White background for navbar */
-            padding: 10px 0; /* Padding for navbar */
+            background-color: #fff;
+            padding: 10px 0;
         }
 
         .navbar-brand {
             font-size: 24px;
             margin: 0;
             color: #2E4053;
-            font-weight: bold; /* Bold font weight for name */
-            margin-right: 10px; /* Move name slightly to the right */
+            font-weight: bold;
+            margin-right: 10px;
         }
 
         .navbar-nav {
@@ -53,7 +53,7 @@
         }
 
         .nav-item {
-            margin-left: 10px; /* Compact margin between items */
+            margin-left: 10px;
         }
 
         .nav-link {
@@ -81,8 +81,8 @@
 
         /* Profile and social links */
         .about-entity {
-            width: 35%; /* 35% width for profile photo and logos */
-            position: relative; /* Position relative for copyright */
+            width: 35%;
+            position: relative;
         }
 
         .about-entity::after {
@@ -91,14 +91,14 @@
             top: 0;
             bottom: 0;
             right: 0;
-            width: 1px; /* Vertical line */
+            width: 1px;
             background-color: #ccc;
             display: block;
             margin: auto;
         }
 
         .about-image {
-            width: 100%; /* Full width for profile photo */
+            width: 100%;
             height: auto;
             margin-bottom: 10px;
         }
@@ -119,14 +119,14 @@
         }
 
         .about-link img {
-            width: 100%; /* Full width for logos */
+            width: 100%;
             height: auto;
             object-fit: contain;
         }
 
         .about-contents {
-            width: 65%; /* 65% width for intro content */
-            padding-left: 20px; /* Add padding for separation */
+            width: 65%;
+            padding-left: 20px;
         }
 
         .quarto-about-jolla {
@@ -137,19 +137,19 @@
         }
 
         .quarto-about-jolla p {
-            text-align: left; /* Align text left */
+            text-align: left;
         }
 
         /* Responsive design */
         @media only screen and (max-width: 768px) {
             .container {
-                padding: 10px; /* Adjust padding for smaller screens */
+                padding: 10px;
             }
 
             .navbar {
                 flex-direction: column;
                 align-items: flex-start;
-                padding: 10px; /* Adjust padding for smaller screens */
+                padding: 10px;
             }
 
             .navbar-nav {
@@ -157,17 +157,17 @@
                 width: 100%;
                 align-items: center;
                 padding: 0;
-                display: none; /* Hidden by default on mobile */
+                display: none;
                 position: absolute;
                 top: 60px;
                 left: 0;
-                background-color: #fff; /* White background for navbar in mobile */
+                background-color: #fff;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
                 z-index: 1;
             }
 
             .navbar-nav.active {
-                display: flex; /* Show when active (toggle button clicked) */
+                display: flex;
             }
 
             .nav-item {
@@ -176,40 +176,40 @@
 
             .quarto-about-jolla {
                 flex-direction: column;
-                align-items: center; /* Center content */
+                align-items: center;
             }
 
             .about-entity,
             .about-contents {
-                width: 100%; /* Full width on mobile */
+                width: 100%;
             }
 
             .about-entity::after {
-                display: none; /* Hide vertical line on mobile */
+                display: none;
             }
 
             .about-image {
-                width: 50%; /* Adjust width for profile photo on mobile */
+                width: 50%;
                 margin-bottom: 10px;
             }
 
             .about-links {
-                flex-direction: row; /* Align logos horizontally on mobile */
+                flex-direction: row;
                 justify-content: center;
             }
 
             .about-link {
-                margin: 0 5px; /* Adjust margin for logos on mobile */
+                margin: 0 5px;
             }
 
             .about-link img {
-                width: 1cm; /* Adjust logo size for mobile */
-                height: 1cm; /* Adjust logo size for mobile */
+                width: 1cm;
+                height: 1cm;
             }
 
             .about-contents {
-                padding-left: 0; /* Remove padding for intro content on mobile */
-                order: -1; /* Move intro content above profile photo on mobile */
+                padding-left: 0;
+                order: -1;
             }
         }
     </style>
@@ -233,7 +233,7 @@
     <main class="container">
         <section class="quarto-about-jolla">
             <div class="about-entity">
-                <img src="profile.jpg" alt="Profile Photo" class="about-image">
+                <img src="Photo profile.jpg.jpg" alt="Profile Photo" class="about-image">
                 <div class="about-links">
                     <a href="https://scholar.google.com/citations?user=8R1nWlMAAAAJ" class="about-link"><img src="google-scholar.png" alt="Google Scholar"></a>
                     <a href="https://www.researchgate.net/profile/Devendraraj_Madhanagopal" class="about-link"><img src="researchgate.png" alt="ResearchGate"></a>
@@ -251,6 +251,5 @@
             </div>
         </section>
     </main>
-
 </body>
 </html>
