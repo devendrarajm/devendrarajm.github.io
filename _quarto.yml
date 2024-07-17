@@ -17,15 +17,15 @@ website:
   page-footer: 
     left: "Copyright 2024, Devendraraj Madhanagopal"
     right: 
-      - icon: google-scholar
+      - icon: google-scholar.png.png
         href: https://scholar.google.com/citations?user=8R1nWlMAAAAJ
-      - icon: researchgate
+      - icon: researchgate.png.png
         href: https://www.researchgate.net/profile/Devendraraj_Madhanagopal
-      - icon: fes
+      - icon: fes.png
         href: https://www.futureearthcoasts.org/biography/dr-devendraraj-madhanagopal/
-      - icon: routledge
+      - icon: routledge.png.png
         href: https://www.routledge.com/authors/i23171-devendraraj-madhanagopal
-      - icon: gmail
+      - icon: gmail.png.png
         href: mailto:devendraraj.mm@gmail.com
 
 format:
