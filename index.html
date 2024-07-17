@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles-dark.css">
     <style>
-        /* General styles */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
         body {
             font-family: 'Roboto', sans-serif;
             font-size: 18px;
@@ -27,7 +28,6 @@
             text-align: center;
         }
 
-        /* Header styles */
         .navbar {
             display: flex;
             align-items: center;
@@ -68,7 +68,6 @@
             color: #1E90FF;
         }
 
-        /* Content styles */
         .quarto-title {
             font-size: 24px;
             color: #2E4053;
@@ -79,7 +78,6 @@
             display: none;
         }
 
-        /* Profile and social links */
         .about-entity {
             width: 35%;
             position: relative;
@@ -111,6 +109,12 @@
             margin-top: 15px;
         }
 
+        .about-links-row {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
         .about-link {
             text-decoration: none;
             display: block;
@@ -140,7 +144,6 @@
             text-align: left;
         }
 
-        /* Responsive design */
         @media only screen and (max-width: 768px) {
             .container {
                 padding: 10px;
@@ -198,6 +201,11 @@
                 justify-content: center;
             }
 
+            .about-links-row {
+                flex-direction: row;
+                justify-content: center;
+            }
+
             .about-link {
                 margin: 0 5px;
             }
@@ -211,6 +219,13 @@
                 padding-left: 0;
                 order: -1;
             }
+        }
+
+        .copyright {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            font-size: 8px;
         }
     </style>
 </head>
@@ -235,21 +250,34 @@
             <div class="about-entity">
                 <img src="Photo profile.jpg.jpg" alt="Profile Photo" class="about-image">
                 <div class="about-links">
-                    <a href="https://scholar.google.com/citations?user=8R1nWlMAAAAJ" class="about-link"><img src="google-scholar.png" alt="Google Scholar"></a>
-                    <a href="https://www.researchgate.net/profile/Devendraraj_Madhanagopal" class="about-link"><img src="researchgate.png" alt="ResearchGate"></a>
-                    <a href="https://www.futureearthcoasts.org/biography/dr-devendraraj-madhanagopal/" class="about-link"><img src="fes.png" alt="Future Earth Coasts"></a>
-                    <a href="https://www.routledge.com/authors/i23171-devendraraj-madhanagopal" class="about-link"><img src="routledge.png" alt="Routledge"></a>
-                    <a href="mailto:devendraraj.mm@gmail.com" class="about-link"><img src="gmail.png" alt="Email"></a>
+                    <div class="about-links-row">
+                        <a href="https://scholar.google.com/citations?user=8R1nWlMAAAAJ" class="about-link"><img src="google-scholar.png" alt="Google Scholar"></a>
+                        <a href="https://www.researchgate.net/profile/Devendraraj_Madhanagopal" class="about-link"><img src="researchgate.png" alt="ResearchGate"></a>
+                        <a href="https://www.routledge.com/authors/i23171-devendraraj-madhanagopal" class="about-link"><img src="routledge.png" alt="Routledge"></a>
+                    </div>
+                    <div class="about-links-row">
+                        <a href="https://www.futureearthcoasts.org/biography/dr-devendraraj-madhanagopal/" class="about-link"><img src="fes.png" alt="Future Earth Coasts"></a>
+                        <a href="mailto:devendraraj.mm@gmail.com" class="about-link"><img src="gmail.png" alt="Email"></a>
+                    </div>
                 </div>
             </div>
             <div class="about-contents">
                 <h2 class="quarto-title">Welcome to my website!</h2>
                 <p>Trained as an environmental sociologist, I have conducted research on environmental justice, climate change adaptation, climate policy, climate justice, and the social and political dimensions of climate change. I hold a Ph.D. in Sociology from the Department of Humanities and Social Sciences, Indian Institute of Technology Bombay (Mumbai, India). Since 2019, I have been a faculty member associated with the School of Sustainability at XIM University (Odisha, India).</p>
                 <p>I have published four books, including "Local Adaptation to Climate Change in South India: Challenges and the Future in the Tsunami-hit Coastal Regions" (Routledge, UK) and edited volumes related to climate change, environmental justice, climate justice, and socio-political perspectives of risks. As an academic, I have designed and delivered courses on environmental and social issues, gender, disaster management, sustainable development, environmental science, and public administration and governance programs.</p>
-                <p>I have received several international fellowships and travel grants over the years. I continue to network and collaborate with my peers in the United States, the Netherlands, France, Norway, China, Brazil, South Africa, and Kenya to strengthen my research and teaching. If you are interested in collaborating with me or to know more about my works, or any other queries, please do not hesitate to reach me out at <a href="mailto:devendraraj.mm@gmail.com">devendraraj.mm@gmail.com</a>.</p>
-                <p style="font-size: 8px;">Copyright: Devendraraj Madhanagopal, 2024.</p>
+                <p>I have received several international fellowships and travel grants over the years. I continue to network and collaborate with my peers in the United States, the Netherlands, France, Norway, China, Brazil, South Africa, and Kenya to strengthen my research and teaching. If you are interested in collaborating with me or to know more about my works, or any other queries, please do not hesitate to reach me out at devendraraj.mm@gmail.com.<br>
+                <span class="copyright">Copyright: Devendraraj Madhanagopal, 2024</span></p>
             </div>
         </section>
     </main>
+
+    <script>
+        const navToggle = document.querySelector('.navbar');
+        const navLinks = document.querySelector('.navbar-nav');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
