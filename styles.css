@@ -5,6 +5,8 @@ body {
     line-height: 1.6;
     background-color: #f0f0f0;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -21,12 +23,15 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
+    background-color: #fff; /* White background for navbar */
+    padding: 10px 0; /* Padding for navbar */
 }
 
 .navbar-brand {
     font-size: 24px;
     margin: 0;
     color: #2E4053;
+    text-decoration: none;
 }
 
 .navbar-nav {
@@ -44,6 +49,8 @@ body {
     text-decoration: none;
     color: #333;
     transition: color 0.3s ease;
+    display: block;
+    padding: 10px;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -66,23 +73,30 @@ body {
     width: 200px;
     height: auto;
     margin-bottom: 10px;
+    border-radius: 50%; /* Rounded profile image */
 }
 
 .about-links {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
     margin-top: 15px;
 }
 
 .about-link {
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
 }
 
 .about-link img {
-    width: 1cm;
-    height: 1cm;
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
     object-fit: contain;
+    margin-bottom: 5px;
 }
 
 /* Main content */
@@ -99,16 +113,35 @@ body {
     flex: 1;
 }
 
+/* Toggle button for mobile view */
+.toggle-button {
+    display: none; /* Hidden by default on desktop */
+}
+
 /* Responsive design */
 @media only screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        padding: 10px; /* Adjust padding for smaller screens */
     }
 
     .navbar-nav {
         flex-direction: column;
         width: 100%;
+        align-items: center;
+        padding: 0;
+        display: none; /* Hidden by default on mobile */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff; /* White background for navbar in mobile */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .navbar-nav.active {
+        display: flex; /* Show when active (toggle button clicked) */
     }
 
     .nav-item {
@@ -121,5 +154,17 @@ body {
 
     .about-entity {
         align-self: center;
+    }
+
+    .toggle-button {
+        display: block; /* Show toggle button in mobile */
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+    }
+
+    .about-contents {
+        order: -1; /* Move contents below profile image and links */
     }
 }
