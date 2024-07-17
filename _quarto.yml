@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: .
+
+website:
+  title: "Devendraraj Madhanagopal"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: publications.qmd
+        text: Publications
+      - href: awards.qmd
+        text: Awards
+  page-footer: 
+    left: "Copyright 2024, Devendraraj Madhanagopal"
+    right: 
+      - icon: google-scholar
+        href: https://scholar.google.com/citations?user=8R1nWlMAAAAJ
+      - icon: researchgate
+        href: https://www.researchgate.net/profile/Devendraraj_Madhanagopal
+      - icon: fes
+        href: https://www.futureearthcoasts.org/biography/dr-devendraraj-madhanagopal/
+      - icon: routledge
+        href: https://www.routledge.com/authors/i23171-devendraraj-madhanagopal
+      - icon: gmail
+        href: mailto:devendraraj.mm@gmail.com
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+execute:
+  freeze: auto
