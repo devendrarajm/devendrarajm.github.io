@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devendraraj Madhanagopal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-dark.css">
+    <!-- Include any additional CSS or fonts here -->
     <style>
         /* General styles */
         body {
@@ -17,11 +20,12 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px; /* Adjusted width */
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align content */
         }
 
         /* Header styles */
@@ -38,7 +42,8 @@
             font-size: 24px;
             margin: 0;
             color: #2E4053;
-            text-decoration: none;
+            font-weight: bold; /* Bold font weight for name */
+            margin-right: 10px; /* Move name slightly to the right */
         }
 
         .navbar-nav {
@@ -49,7 +54,7 @@
         }
 
         .nav-item {
-            margin-left: 20px;
+            margin-left: 10px; /* Compact margin between items */
         }
 
         .nav-link {
@@ -80,14 +85,12 @@
             width: 200px;
             height: auto;
             margin-bottom: 10px;
-            border-radius: 50%; /* Rounded profile image */
         }
 
         .about-links {
             display: flex;
             justify-content: center;
             gap: 10px;
-            flex-wrap: wrap; /* Ensure links wrap on smaller screens */
             margin-top: 15px;
         }
 
@@ -110,10 +113,13 @@
         .quarto-about-jolla {
             display: flex;
             gap: 30px;
+            justify-content: center; /* Center content */
+            text-align: left; /* Align text left */
         }
 
         .about-entity {
             flex: 0 0 200px;
+            margin-right: 20px; /* Space between profile image and content */
         }
 
         .about-contents {
@@ -133,6 +139,17 @@
                 width: 100%;
                 align-items: center;
                 padding: 0;
+                display: none; /* Hidden by default on mobile */
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #fff; /* White background for navbar in mobile */
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .navbar-nav.active {
+                display: flex; /* Show when active (toggle button clicked) */
             }
 
             .nav-item {
@@ -141,34 +158,41 @@
 
             .quarto-about-jolla {
                 flex-direction: column;
+                align-items: center; /* Center content */
             }
 
             .about-entity {
-                align-self: center;
+                margin-right: 0; /* Remove margin for profile image in mobile */
+                margin-bottom: 20px; /* Space below profile image */
+            }
+
+            .about-contents {
+                order: -1; /* Move contents below profile image and links */
             }
         }
     </style>
 </head>
 <body>
-    <header>
+    <header class="container">
         <nav class="navbar">
-            <a class="navbar-brand" href="#">Devendraraj Madhanagopal</a>
+            <h1 class="navbar-brand">Devendraraj Madhanagopal</h1>
+            <div class="toggle-button">&#9776;</div> <!-- Toggle button for mobile -->
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#employment">Employment</a></li>
-                <li class="nav-item"><a class="nav-link" href="#books">Books</a></li>
-                <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-                <li class="nav-item"><a class="nav-link" href="#talks">Talks</a></li>
-                <li class="nav-item"><a class="nav-link" href="#awards">Awards & Scholarships</a></li>
-                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#employment" class="nav-link">Employment</a></li>
+                <li class="nav-item"><a href="#books" class="nav-link">Books</a></li>
+                <li class="nav-item"><a href="#publications" class="nav-link">Publications</a></li>
+                <li class="nav-item"><a href="#talks" class="nav-link">Talks</a></li>
+                <li class="nav-item"><a href="#awards" class="nav-link">Awards & Scholarships</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
             </ul>
         </nav>
     </header>
     
     <main class="container">
-        <section id="home" class="quarto-about-jolla">
+        <section class="quarto-about-jolla">
             <div class="about-entity">
-                <img src="Photo profile.jpg.jpg" alt="Profile Photo" class="about-image">
+                <img src="profile.jpg" alt="Profile Photo" class="about-image">
                 <div class="about-links">
                     <a href="https://scholar.google.com/citations?user=8R1nWlMAAAAJ" class="about-link"><img src="google-scholar.png" alt="Google Scholar"></a>
                     <a href="https://www.researchgate.net/profile/Devendraraj_Madhanagopal" class="about-link"><img src="researchgate.png" alt="ResearchGate"></a>
@@ -179,16 +203,17 @@
             </div>
             <div class="about-contents">
                 <h2 class="quarto-title">Welcome to my website!</h2>
-                <p>Trained as an environmental sociologist, I have conducted research on environmental justice, climate change adaptation, climate policy, climate justice, and the social and political dimensions of climate change...</p>
-                <p>I hold a Ph.D. in Environmental Sociology and have been associated with the School of Sustainability at XIM University (Odisha, India) since 2019. I have published extensively and delivered courses on various environmental and social issues.</p>
-                <p>Feel free to explore my profile and get in touch via email for collaborations or queries.</p>
+                <p>Trained as an environmental sociologist, I have conducted research on environmental justice, climate change adaptation, climate policy, climate justice, and the social and political dimensions of climate change. I hold a Ph.D. in Sociology from the Department of Humanities and Social Sciences, Indian Institute of Technology Bombay (Mumbai, India). Since 2019, I have been a faculty member associated with the School of Sustainability at XIM University (Odisha, India).</p>
+                <p>I have published four books, including "Local Adaptation to Climate Change in South India: Challenges and the Future in the Tsunami-hit Coastal Regions" (Routledge, UK) and edited volumes related to climate change, environmental justice, climate justice, and socio-political perspectives of risks. As an academic, I have designed and delivered courses on environmental and social issues, gender, disaster management, sustainable development, environmental science, and public administration and governance programs.</p>
+                <p>I have received several international fellowships and travel grants over the years. I continue to network and collaborate with my peers in the United States, the Netherlands, France, Norway, China, Brazil, South Africa, and Kenya to strengthen my research and teaching. If you are interested in collaborating with me or to know more about my works, or any other queries, please do not hesitate to reach me out at <a href="mailto:devendraraj.mm@gmail.com">devendraraj.mm@gmail.com</a>.</p>
             </div>
         </section>
     </main>
 
     <footer class="footer container">
-        <p>&copy; 2024 Devendraraj Madhanagopal</p>
+        <!-- Footer content -->
     </footer>
 
+    <!-- Include any additional JavaScript libraries or scripts here -->
 </body>
 </html>
