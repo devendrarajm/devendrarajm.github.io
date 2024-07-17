@@ -33,7 +33,7 @@ body {
     margin: 0;
     color: #2E4053;
     font-weight: bold; /* Bold font weight for name */
-    margin-right: 10px; /* Move name slightly to the right */
+    margin-right: 20px; /* Increase space between name and home tab */
 }
 
 .navbar-nav {
@@ -41,6 +41,8 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    flex: 1; /* Expand navigation to take remaining space */
+    justify-content: flex-end; /* Align tabs to the right */
 }
 
 .nav-item {
@@ -51,7 +53,6 @@ body {
     text-decoration: none;
     color: #333;
     transition: color 0.3s ease;
-    display: block;
     padding: 10px;
 }
 
@@ -72,7 +73,7 @@ body {
 
 /* Profile and social links */
 .about-image {
-    width: 200px;
+    width: 25%; /* Adjusted width for profile image */
     height: auto;
     margin-bottom: 10px;
 }
@@ -93,9 +94,9 @@ body {
 }
 
 .about-link img {
-    width: 1cm; /* Adjust as needed */
+    width: 1cm; /* Size in centimeters */
     height: auto; /* Maintain aspect ratio */
-    object-fit: contain;
+    object-fit: contain; /* Ensure images fit within specified size */
     margin-bottom: 5px;
 }
 
@@ -105,19 +106,37 @@ body {
     gap: 30px;
     justify-content: center; /* Center content */
     text-align: left; /* Align text left */
-    margin-top: 2.5cm; /* Distance between profile photo and intro content */
+    margin-top: 20px; /* Adjust margin for space */
 }
 
 .about-entity {
-    flex: 0 0 200px;
+    flex: 1; /* Take 1/4 of the container width */
+    max-width: 25%; /* Limit to 25% of container width */
     margin-right: 20px; /* Space between profile image and content */
+    position: relative; /* Relative positioning for the vertical line */
+}
+
+.about-entity::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -15px; /* Adjust position for the line */
+    width: 1px; /* Vertical line */
+    background-color: #ccc;
 }
 
 .about-contents {
-    flex: 1;
+    flex: 3; /* Take 3/4 of the container width */
 }
 
-/* Responsive design */
+/* Footer styles */
+.footer {
+    font-size: 12px; /* Small font size for copyright */
+    text-align: right; /* Align text to the right */
+    margin-top: 20px; /* Space at the top */
+}
+
 @media only screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -125,10 +144,14 @@ body {
         padding: 10px; /* Adjust padding for smaller screens */
     }
 
+    .navbar-brand {
+        margin-bottom: 10px; /* Space below the name */
+    }
+
     .navbar-nav {
         flex-direction: column;
         width: 100%;
-        align-items: center;
+        align-items: flex-start;
         padding: 0;
         display: none; /* Hidden by default on mobile */
         position: absolute;
@@ -154,8 +177,10 @@ body {
     }
 
     .about-entity {
+        max-width: 100%; /* Full width for profile image in mobile */
         margin-right: 0; /* Remove margin for profile image in mobile */
         margin-bottom: 20px; /* Space below profile image */
+        position: static; /* Reset position */
     }
 
     .about-contents {
@@ -168,4 +193,18 @@ body {
         object-fit: contain; /* Ensure images fit within specified size */
         margin-bottom: 5px;
     }
+
+    .footer {
+        text-align: center; /* Center align footer text */
+        margin-top: 40px; /* Space at the top */
+    }
+}
+
+/* Copyright statement at the bottom right corner */
+.copyright {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+    color: #666;
 }
