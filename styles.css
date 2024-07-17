@@ -1,3 +1,21 @@
+/*-- scss:defaults --*/
+
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap';
+
+$font-family: "Roboto", sans-serif;
+$font-family-serif: "Roboto", sans-serif;
+
+/*-- scss:rules --*/
+kbd,
+.kbd {
+    background-color: #f6f5f5 !important;
+}
+
+.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
 /* General styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -10,11 +28,12 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px; /* Adjusted width */
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align content */
 }
 
 /* Header styles */
@@ -31,7 +50,8 @@ body {
     font-size: 24px;
     margin: 0;
     color: #2E4053;
-    text-decoration: none;
+    font-weight: bold; /* Bold font weight for name */
+    margin-right: 10px; /* Move name slightly to the right */
 }
 
 .navbar-nav {
@@ -42,7 +62,7 @@ body {
 }
 
 .nav-item {
-    margin-left: 20px;
+    margin-left: 10px; /* Compact margin between items */
 }
 
 .nav-link {
@@ -73,14 +93,12 @@ body {
     width: 200px;
     height: auto;
     margin-bottom: 10px;
-    border-radius: 50%; /* Rounded profile image */
 }
 
 .about-links {
     display: flex;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
     margin-top: 15px;
 }
 
@@ -103,19 +121,17 @@ body {
 .quarto-about-jolla {
     display: flex;
     gap: 30px;
+    justify-content: center; /* Center content */
+    text-align: left; /* Align text left */
 }
 
 .about-entity {
     flex: 0 0 200px;
+    margin-right: 20px; /* Space between profile image and content */
 }
 
 .about-contents {
     flex: 1;
-}
-
-/* Toggle button for mobile view */
-.toggle-button {
-    display: none; /* Hidden by default on desktop */
 }
 
 /* Responsive design */
@@ -150,18 +166,12 @@ body {
 
     .quarto-about-jolla {
         flex-direction: column;
+        align-items: center; /* Center content */
     }
 
     .about-entity {
-        align-self: center;
-    }
-
-    .toggle-button {
-        display: block; /* Show toggle button in mobile */
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        cursor: pointer;
+        margin-right: 0; /* Remove margin for profile image in mobile */
+        margin-bottom: 20px; /* Space below profile image */
     }
 
     .about-contents {
