@@ -1,1 +1,125 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+}
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    margin: 0;
+    color: #2E4053;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #1E90FF;
+}
+
+/* Content styles */
+.quarto-title {
+    font-size: 24px;
+    color: #2E4053;
+    margin-bottom: 20px;
+}
+
+.quarto-title-meta {
+    display: none;
+}
+
+/* Profile and social links */
+.about-image {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.about-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.about-link {
+    text-decoration: none;
+}
+
+.about-link img {
+    width: 1cm;
+    height: 1cm;
+    object-fit: contain;
+}
+
+/* Main content */
+.quarto-about-jolla {
+    display: flex;
+    gap: 30px;
+}
+
+.about-entity {
+    flex: 0 0 200px;
+}
+
+.about-contents {
+    flex: 1;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    .quarto-about-jolla {
+        flex-direction: column;
+    }
+
+    .about-entity {
+        align-self: center;
+    }
+}
