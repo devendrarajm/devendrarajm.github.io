@@ -1,5 +1,16 @@
-// JavaScript for toggle button functionality
+// Toggle navigation for small screens
 function toggleNav() {
-    var nav = document.querySelector('.navbar-nav');
-    nav.classList.toggle('active');
+    var navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("active");
 }
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
