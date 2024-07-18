@@ -5,6 +5,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    line-height: 1.6; /* Adjusted line height for better readability */
 }
 
 .container {
@@ -25,9 +26,11 @@ body {
 }
 
 .navbar-brand {
-    font-size: 22px; /* Slightly reduced font size */
+    font-size: 28px; /* Increased font size */
     font-weight: bold;
     margin: 0;
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Black color */
 }
 
 .toggle-button {
@@ -53,10 +56,6 @@ body {
     text-decoration: none;
     color: #333;
     font-size: 18px;
-}
-
-.nav-link:hover {
-    color: #555;
 }
 
 /* About Section Styles */
@@ -109,8 +108,7 @@ body {
 }
 
 p {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 16px; /* Adjusted font size for paragraphs */
     margin-bottom: 20px;
 }
 
@@ -151,4 +149,34 @@ p {
     .about-contents {
         margin-top: 20px;
     }
+}
+
+/* Books Section Styles */
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.book-item {
+    width: 30%; /* Adjusted width for book items */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.book-cover {
+    width: 3cm; /* Reduced size of book covers */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Publications Section Styles */
+.publications {
+    margin-top: 20px;
+    line-height: 1.6; /* Adjusted line height for publications */
+}
+
+.publication-item {
+    margin-bottom: 20px;
 }
