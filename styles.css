@@ -26,12 +26,14 @@ body {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #ccc;
+    padding-left: 50px; /* Add left padding to the navbar */
 }
 
 .navbar-brand {
     font-size: 28px;
     font-weight: bold;
     margin: 0;
+    padding-left: 30px; /* Add left padding to the name */ 
 }
 
 .navbar-brand a {
