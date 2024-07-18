@@ -23,8 +23,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0;
+    padding-left: 1.5cm; /* Adjust left padding */
     border-bottom: 1px solid #ccc;
 }
 
@@ -32,6 +32,7 @@ body {
     font-size: 28px;
     font-weight: bold;
     margin: 0;
+    padding: 0;
 }
 
 .navbar-brand a {
@@ -55,7 +56,6 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center navigation items */
 }
 
 .nav-item {
@@ -66,19 +66,6 @@ body {
     text-decoration: none;
     color: #333;
     font-size: 18px;
-}
-
-/* Adjusted the styling for the site title */
-.site-title {
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: 30px; /* Slightly reduced font size */
-}
-
-/* Adjusted the divider styling */
-.navbar-divider {
-    margin-top: 10px;
-    border-top: 1px solid #ccc;
 }
 
 /* About Section Styles */
