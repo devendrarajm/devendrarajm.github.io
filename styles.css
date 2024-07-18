@@ -199,6 +199,12 @@ p {
     max-width: 100%;
 }
 
+/* Content Section Styles */
+.content-section p,
+.content-section li {
+    margin-bottom: 1em;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .toggle-button {
