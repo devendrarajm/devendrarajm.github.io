@@ -130,16 +130,55 @@ p {
     color: #666;
 }
 
-/* Book Styles */
+/* Books Styles */
+.books {
+    margin-top: 2em;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
 .book {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2em;
 }
 
 .book-cover {
-    height: 5cm;
     width: auto;
-    margin-right: 20px;
+    height: 5cm;
+    margin-right: 2em;
+}
+
+.book-details {
+    flex: 1;
+}
+
+.book-details h4 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.book-details p {
+    margin: 0.5em 0;
+}
+
+.book-details a {
+    display: inline-block;
+    margin-top: 1em;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.book-details a:hover {
+    text-decoration: underline;
+}
+
+.author-name {
+    font-weight: bold;
 }
 
 /* Gallery Styles */
@@ -206,5 +245,14 @@ p {
     .gallery-item img {
         height: auto;
         width: 100%;
+    }
+
+    .book {
+        flex-direction: column;
+    }
+
+    .book-cover {
+        margin-right: 0;
+        margin-bottom: 1em;
     }
 }
