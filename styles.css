@@ -9,15 +9,20 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0;
+    background-color: #ffffff; /* Set the entire screen to white */
     color: #333;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 960px;
-    margin: 0 auto;
+    width: 100%;
     padding: 20px;
 }
 
@@ -36,41 +41,50 @@ a:hover {
 
 /* Header Styles */
 header {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Set header background to white */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
     position: relative;
-}
-
-.header-container {
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
-.site-name {
+.navbar-brand {
     font-size: 1.5rem;
+    font-weight: bold; /* Make the name prominent */
     margin-left: 20px;
+    white-space: nowrap; /* Ensure the name appears in a single line */
 }
 
 .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
     display: flex;
     list-style-type: none;
     margin-right: 20px;
 }
 
-.navbar li {
-    margin-left: 10px;
+.navbar-nav.active {
+    display: block;
 }
 
-.navbar a {
+.nav-item {
+    margin-left: 5px; /* Compact the navigation tabs */
+}
+
+.nav-link {
     color: #333;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-.navbar a:hover {
+.nav-link:hover {
     background-color: #007bff;
     color: #fff;
 }
@@ -80,9 +94,43 @@ header {
     color: #fff;
 }
 
+.toggle-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block;
+    }
+
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .navbar-brand {
+        margin-left: 10px;
+    }
+}
+
 /* Main Content Styles */
 main {
     padding: 20px;
+    margin-top: -20px; /* Move up the profile photo and intro content */
 }
 
 .section {
@@ -110,4 +158,66 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* About Section Styles */
+.quarto-about-jolla {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-entity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.about-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-links-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.about-link img {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+}
+
+.about-contents {
+    max-width: 800px;
+    text-align: left;
+}
+
+@media (min-width: 769px) {
+    .quarto-about-jolla {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .about-entity {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .about-contents {
+        text-align: left;
+    }
 }
