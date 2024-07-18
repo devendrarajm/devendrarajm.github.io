@@ -42,7 +42,7 @@ header {
     padding-bottom: 0.5rem;
 }
 
-/* Additional Styles */
+/* Additional Nipun Batra Styles */
 kbd,
 .kbd {
     background-color: #f6f5f5 !important;
@@ -50,7 +50,10 @@ kbd,
 
 /* Media Queries for Mobile View */
 @media (max-width: 768px) {
-    /* Add your mobile styles here */
+    /* Toggle button visible only in mobile view */
+    .toggle-button {
+        display: block;
+    }
 }
 
 /* Main Content Styles */
@@ -82,4 +85,23 @@ main {
 footer {
     text-align: center;
     background-color: #333;
+}
+
+/* Profile Photo and Logo Styles */
+.profile-photo {
+    width: 100px; /* Adjusted size for profile photo */
+    height: 100px; /* Adjusted size for profile photo */
+    border-radius: 50%; /* Make it round */
+    margin-bottom: 20px; /* Add space below the photo */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 1cm; /* Adjusted size for logos (around 1 cm) */
+    height: 1cm; /* Adjusted size for logos (around 1 cm) */
+    margin: 0 5px; /* Add space between logos */
 }
