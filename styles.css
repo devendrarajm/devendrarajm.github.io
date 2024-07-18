@@ -3,232 +3,153 @@
 
 /* Set font family */
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff; /* Set entire screen to white */
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 /* Reset CSS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Global Styles */
-body {
-    line-height: 1.6;
-    background-color: #ffffff; /* Set the entire screen to white */
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
 .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 h1, h2, h3 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 a {
-    color: #007bff;
-    text-decoration: none;
+  color: #007bff;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Header Styles */
 header {
-    background-color: #ffffff; /* Set header background to white */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px; /* Reduce padding to make the header compact */
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #ffffff; /* Set header background to white */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px; /* Reduced padding to make the header compact */
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold; /* Make the name prominent */
-    white-space: nowrap; /* Ensure the name appears in a single line */
+  font-size: 1.5rem;
+  font-weight: bold; /* Make the name prominent */
+  white-space: nowrap; /* Ensure the name appears in a single line */
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .navbar-nav {
-    display: flex;
-    list-style-type: none;
+  display: flex;
+  list-style-type: none;
 }
 
 .nav-item {
-    margin-left: 5px; /* Compact the navigation tabs */
+  margin-left: 5px; /* Compact the navigation tabs */
 }
 
 .nav-link {
-    color: #333;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .nav-link:hover {
-    background-color: #007bff;
-    color: #fff;
+  background-color: #007bff;
+  color: #fff;
 }
 
 .active {
-    background-color: #007bff;
-    color: #fff;
+  background-color: #007bff;
+  color: #fff;
 }
 
 .toggle-button {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
+/* Media Queries for Mobile View */
 @media (max-width: 768px) {
-    .toggle-button {
-        display: block;
-    }
+  .toggle-button {
+    display: block;
+  }
 
-    .navbar-nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
+  .navbar-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
 
-    .navbar-nav.active {
-        display: flex;
-    }
+  .navbar-nav.active {
+    display: flex;
+  }
 
-    .nav-item {
-        margin: 10px 0;
-    }
+  .nav-item {
+    margin: 10px 0;
+  }
 
-    .navbar-brand {
-        margin-left: 10px;
-    }
+  .navbar-brand {
+    margin-left: 10px;
+  }
 }
 
 /* Main Content Styles */
 main {
-    padding: 20px;
-    margin-top: -20px; /* Move up the profile photo and intro content */
+  padding: 20px;
+  margin-top: -20px; /* Move up profile photo and intro content */
+  display: flex; /* Center content horizontally (replace with your preferred method) */
+  justify-content: center;
+  align-items: center;
 }
 
 .section {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .section h2 {
-    font-size: 1.8rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 /* Footer Styles */
 footer {
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* About Section Styles */
-.quarto-about-jolla {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.about-entity {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.about-image {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.about-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.about-links-row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.about-link img {
-    width: 40px;
-    height: 40px;
-    margin: 0 5px;
-}
-
-.about-contents {
-    max-width: 800px;
-    text-align: left;
-}
-
-@media (min-width: 769px) {
-    .quarto-about-jolla {
-        flex-direction: row;
-        text-align: left;
-    }
-
-    .about-entity {
-        margin-right: 20px;
-        margin-bottom: 0;
-    }
-
-    .about-contents {
-        text-align: left;
-    }
-}
-
-/* Additional Styles */
-kbd,
-.kbd {
-    background-color: #f6f5f5 !important;
-}
-
-/* Copyright Styles */
-.copyright {
-    font-size: 7px;
-    margin-top: 10px;
-    display: block;
-}
+  text-align: center;
+  background-color: #333;
+  color: #fff;
