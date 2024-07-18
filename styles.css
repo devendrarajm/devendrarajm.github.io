@@ -13,7 +13,7 @@ body {
 
 .container {
     width: 85%;
-    max-width: 900px; /* Reduced max-width for a more compact layout */
+    max-width: 1050px; /* Reduced max-width for a more compact layout */
     margin: 0 auto; /* Center the container */
     padding: 20px;
 }
