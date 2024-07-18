@@ -1,202 +1,146 @@
-/* General styles */
+/* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    background-color: #f0f0f0;
+    font-family: 'Helvetica Pro Light', sans-serif;
+    background-color: #fff;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 1000px; /* Adjusted width */
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center align content */
 }
 
-/* Header styles */
+/* Navbar Styles */
 .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
-    background-color: #fff; /* White background for navbar */
-    padding: 10px 0; /* Padding for navbar */
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
 }
 
 .navbar-brand {
     font-size: 24px;
+    font-weight: bold;
     margin: 0;
-    color: #2E4053;
-    font-weight: bold; /* Bold font weight for name */
-    margin-right: 20px; /* Increase space between name and home tab */
+}
+
+.toggle-button {
+    display: none;
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 .navbar-nav {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
     margin: 0;
-    flex: 1; /* Expand navigation to take remaining space */
-    justify-content: flex-end; /* Align tabs to the right */
+    padding: 0;
+    display: flex;
 }
 
 .nav-item {
-    margin-left: 10px; /* Compact margin between items */
+    margin-left: 20px;
 }
 
 .nav-link {
     text-decoration: none;
     color: #333;
-    transition: color 0.3s ease;
-    padding: 10px;
+    font-size: 18px;
 }
 
-.nav-link:hover, .nav-link.active {
-    color: #1E90FF;
+/* About Section Styles */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-/* Content styles */
-.quarto-title {
-    font-size: 24px;
-    color: #2E4053;
-    margin-bottom: 20px;
+.about-entity {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.quarto-title-meta {
-    display: none;
-}
-
-/* Profile and social links */
 .about-image {
-    width: 25%; /* Adjusted width for profile image */
+    border-radius: 0;
+    width: 150px;
     height: auto;
     margin-bottom: 10px;
 }
 
 .about-links {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.about-link {
-    text-decoration: none;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    color: #333;
+    margin-top: 10px;
 }
 
 .about-link img {
-    width: 1cm; /* Size in centimeters */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure images fit within specified size */
-    margin-bottom: 5px;
-}
-
-/* Main content */
-.quarto-about-jolla {
-    display: flex;
-    gap: 30px;
-    justify-content: center; /* Center content */
-    text-align: left; /* Align text left */
-    margin-top: 20px; /* Adjust margin for space */
-}
-
-.about-entity {
-    flex: 1; /* Take 1/4 of the container width */
-    max-width: 25%; /* Limit to 25% of container width */
-    margin-right: 20px; /* Space between profile image and content */
-    position: relative; /* Relative positioning for the vertical line */
-}
-
-.about-entity::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -15px; /* Adjust position for the line */
-    width: 1px; /* Vertical line */
-    background-color: #ccc;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
 }
 
 .about-contents {
-    flex: 3; /* Take 3/4 of the container width */
+    flex: 2;
+    min-width: 300px;
+    margin-left: 20px;
 }
 
-/* Footer styles */
-.footer {
-    font-size: 12px; /* Small font size for copyright */
-    text-align: right; /* Align text to the right */
-    margin-top: 20px; /* Space at the top */
+.quarto-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-/* Responsive design */
-@media only screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
 
-    .navbar-brand {
-        margin-bottom: 10px; /* Space below the name */
+.copyright {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block;
     }
 
     .navbar-nav {
+        display: none;
         flex-direction: column;
         width: 100%;
-        align-items: flex-start;
-        padding: 0;
-        display: none; /* Hidden by default on mobile */
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #fff; /* White background for navbar in mobile */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        z-index: 1;
     }
 
     .navbar-nav.active {
-        display: flex; /* Show when active (toggle button clicked) */
+        display: flex;
     }
 
     .nav-item {
-        margin: 5px 0;
+        margin: 10px 0;
     }
+}
 
-    .quarto-about-jolla {
-        flex-direction: column;
-        align-items: center; /* Center content */
-        margin-top: 20px; /* Adjust margin for mobile */
-    }
-
-    .about-entity {
-        max-width: 100%; /* Full width for profile image in mobile */
-        margin-right: 0; /* Remove margin for profile image in mobile */
-        margin-bottom: 20px; /* Space below profile image */
-        position: static; /* Reset position */
+/* Mobile Styles */
+@media (max-width: 576px) {
+    .about-entity, .about-contents {
+        margin: 0;
     }
 
     .about-contents {
-        order: -1; /* Move contents below profile image and links */
-    }
-
-    .about-link img {
-        width: 1cm; /* Size in centimeters */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Ensure images fit within specified size */
-        margin-bottom: 5px;
-    }
-
-    .footer {
-        text-align: center; /* Center align footer text */
-        margin-top: 40px; /* Space at the top */
+        margin-top: 20px;
     }
 }
