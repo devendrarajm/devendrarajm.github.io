@@ -9,16 +9,21 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #ffffff; /* Set the entire screen to white */
+    background-color: white; /* Set the entire screen to white */
     color: #333;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center; /* Center the contents */
 }
 
 h1, h2, h3 {
@@ -36,25 +41,12 @@ a:hover {
 
 /* Header Styles */
 header {
-    background-color: #ffffff; /* Set header background to white */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px; /* Add padding to adjust spacing */
-}
-
-.site-name {
-    font-size: 1.5rem;
-    font-weight: bold; /* Make the name prominent */
-    margin-left: 20px;
-    white-space: nowrap; /* Ensure the name appears in a single line */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    max-width: 200px; /* Reduce the width of the header */
 }
 
 .navbar {
@@ -70,8 +62,9 @@ header {
 .navbar a {
     color: #333;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 10px 15px; /* Reduce the padding and margin */
     border-radius: 5px;
+    margin: 0 5px;
 }
 
 .navbar a:hover {
@@ -86,7 +79,6 @@ header {
 
 /* Main Content Styles */
 main {
-    padding: 20px;
     margin-top: -20px; /* Move up the profile photo and intro content */
 }
 
@@ -104,6 +96,10 @@ main {
 .section p {
     font-size: 1.1rem;
     line-height: 1.8;
+}
+
+.profile-photo, .intro {
+    margin-top: -20px; /* Move up the profile photo and intro content */
 }
 
 /* Footer Styles */
