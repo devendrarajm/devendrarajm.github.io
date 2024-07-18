@@ -1,124 +1,202 @@
+/* General styles */
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    max-width: 1000px; /* Adjusted width */
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align content */
 }
 
-.header {
+/* Header styles */
+.navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    background-color: #007acc;
-    color: #fff;
-    border-radius: 8px;
-}
-
-.header .logo img {
-    height: 50px;
-    border-radius: 50%;
-}
-
-.header .name {
-    font-size: 24px;
-    font-weight: 700;
-    margin: 0;
-}
-
-.nav-toggle {
-    font-size: 24px;
-    display: none;
-    cursor: pointer;
-}
-
-.nav-tabs {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-tab {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 700;
-    transition: color 0.3s;
-}
-
-.nav-tab:hover,
-.nav-tab.active {
-    color: #ffd700;
-}
-
-.compact-hr {
-    border: 1px solid #ddd;
-    margin: 20px 0;
-}
-
-.profile-container {
-    display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    margin-bottom: 10px;
+    background-color: #fff; /* White background for navbar */
+    padding: 10px 0; /* Padding for navbar */
 }
 
-.intro-container {
-    flex: 1;
-    padding: 20px;
+.navbar-brand {
+    font-size: 24px;
+    margin: 0;
+    color: #2E4053;
+    font-weight: bold; /* Bold font weight for name */
+    margin-right: 20px; /* Increase space between name and home tab */
 }
 
-.intro {
+.navbar-nav {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex: 1; /* Expand navigation to take remaining space */
+    justify-content: flex-end; /* Align tabs to the right */
+}
+
+.nav-item {
+    margin-left: 10px; /* Compact margin between items */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+    padding: 10px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #1E90FF;
+}
+
+/* Content styles */
+.quarto-title {
+    font-size: 24px;
+    color: #2E4053;
     margin-bottom: 20px;
 }
 
-.social-logos {
+.quarto-title-meta {
+    display: none;
+}
+
+/* Profile and social links */
+.about-image {
+    width: 25%; /* Adjusted width for profile image */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.about-links {
     display: flex;
+    justify-content: center;
     gap: 10px;
+    margin-top: 15px;
 }
 
-.social-logo img {
-    height: 30px;
-    transition: transform 0.3s;
+.about-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
 }
 
-.social-logo img:hover {
-    transform: scale(1.1);
+.about-link img {
+    width: 1cm; /* Size in centimeters */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure images fit within specified size */
+    margin-bottom: 5px;
 }
 
-@media (max-width: 768px) {
-    .header {
+/* Main content */
+.quarto-about-jolla {
+    display: flex;
+    gap: 30px;
+    justify-content: center; /* Center content */
+    text-align: left; /* Align text left */
+    margin-top: 20px; /* Adjust margin for space */
+}
+
+.about-entity {
+    flex: 1; /* Take 1/4 of the container width */
+    max-width: 25%; /* Limit to 25% of container width */
+    margin-right: 20px; /* Space between profile image and content */
+    position: relative; /* Relative positioning for the vertical line */
+}
+
+.about-entity::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -15px; /* Adjust position for the line */
+    width: 1px; /* Vertical line */
+    background-color: #ccc;
+}
+
+.about-contents {
+    flex: 3; /* Take 3/4 of the container width */
+}
+
+/* Footer styles */
+.footer {
+    font-size: 12px; /* Small font size for copyright */
+    text-align: right; /* Align text to the right */
+    margin-top: 20px; /* Space at the top */
+}
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+    .navbar {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
+        padding: 10px; /* Adjust padding for smaller screens */
     }
 
-    .nav-tabs {
+    .navbar-brand {
+        margin-bottom: 10px; /* Space below the name */
+    }
+
+    .navbar-nav {
         flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-
-    .profile-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .intro-container {
+        width: 100%;
+        align-items: flex-start;
         padding: 0;
+        display: none; /* Hidden by default on mobile */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff; /* White background for navbar in mobile */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1;
     }
 
-    .social-logos {
-        justify-content: center;
-        margin-top: 20px;
+    .navbar-nav.active {
+        display: flex; /* Show when active (toggle button clicked) */
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    .quarto-about-jolla {
+        flex-direction: column;
+        align-items: center; /* Center content */
+        margin-top: 20px; /* Adjust margin for mobile */
+    }
+
+    .about-entity {
+        max-width: 100%; /* Full width for profile image in mobile */
+        margin-right: 0; /* Remove margin for profile image in mobile */
+        margin-bottom: 20px; /* Space below profile image */
+        position: static; /* Reset position */
+    }
+
+    .about-contents {
+        order: -1; /* Move contents below profile image and links */
+    }
+
+    .about-link img {
+        width: 1cm; /* Size in centimeters */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure images fit within specified size */
+        margin-bottom: 5px;
+    }
+
+    .footer {
+        text-align: center; /* Center align footer text */
+        margin-top: 40px; /* Space at the top */
     }
 }
