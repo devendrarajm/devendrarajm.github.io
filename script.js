@@ -16,4 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(target).classList.add('active');
         });
     });
+
+    // Toggle navigation for mobile view
+    const toggleButton = document.querySelector('.toggle-button');
+    const navLinksContainer = document.querySelector('.navbar-nav');
+
+    toggleButton.addEventListener('click', function() {
+        navLinksContainer.classList.toggle('active');
+    });
 });
