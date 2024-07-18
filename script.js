@@ -1,4 +1,5 @@
+// JavaScript for toggle button functionality
 function toggleNav() {
-    const navbarNav = document.querySelector('.navbar-nav');
-    navbarNav.classList.toggle('active');
+    var nav = document.querySelector('.navbar-nav');
+    nav.classList.toggle('active');
 }
