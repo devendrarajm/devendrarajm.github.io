@@ -9,21 +9,16 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: white; /* Set the entire screen to white */
+    background-color: #f0f0f0;
     color: #333;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
-    text-align: center; /* Center the contents */
 }
 
 h1, h2, h3 {
@@ -41,12 +36,21 @@ a:hover {
 
 /* Header Styles */
 header {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    max-width: 200px; /* Reduce the width of the header */
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-name {
+    font-size: 1.5rem;
+    margin-left: 20px;
 }
 
 .navbar {
@@ -56,15 +60,14 @@ header {
 }
 
 .navbar li {
-    margin-left: 5px; /* Compact the navigation tabs */
+    margin-left: 10px;
 }
 
 .navbar a {
     color: #333;
     text-decoration: none;
-    padding: 10px 15px; /* Reduce the padding and margin */
+    padding: 5px 10px;
     border-radius: 5px;
-    margin: 0 5px;
 }
 
 .navbar a:hover {
@@ -79,7 +82,7 @@ header {
 
 /* Main Content Styles */
 main {
-    margin-top: -20px; /* Move up the profile photo and intro content */
+    padding: 20px;
 }
 
 .section {
@@ -96,10 +99,6 @@ main {
 .section p {
     font-size: 1.1rem;
     line-height: 1.8;
-}
-
-.profile-photo, .intro {
-    margin-top: -20px; /* Move up the profile photo and intro content */
 }
 
 /* Footer Styles */
