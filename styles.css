@@ -1,5 +1,5 @@
 /* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('(link unavailable)');
 
 /* Set font family */
 $font-family: "Roboto", sans-serif;
@@ -27,22 +27,23 @@ a:hover {
 
 /* Header Styles */
 header {
-    background-color: #ffffff; /* Set header background to white */
+    max-width: 960px;
+    background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px; /* Reduced padding to make the header compact */
+    padding: 5px 20px;
     position: relative;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .navbar {
+    margin: 0 auto;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
-/* Additional Nipun Batra Styles */
+/* Additional Styles */
 kbd,
 .kbd {
     background-color: #f6f5f5 !important;
@@ -58,15 +59,17 @@ kbd,
 
 /* Main Content Styles */
 main {
+    max-width: 960px;
+    margin: 20px auto;
     padding: 20px;
-    margin-top: -20px; /* Move up profile photo and intro content */
-    display: flex; /* Center content horizontally (replace with your preferred method) */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .section {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 .section h2 {
@@ -89,10 +92,10 @@ footer {
 
 /* Profile Photo and Logo Styles */
 .profile-photo {
-    width: 100px; /* Adjusted size for profile photo */
-    height: 100px; /* Adjusted size for profile photo */
-    border-radius: 50%; /* Make it round */
-    margin-bottom: 20px; /* Add space below the photo */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px auto;
 }
 
 .logo-container {
@@ -101,7 +104,7 @@ footer {
 }
 
 .logo {
-    width: 1cm; /* Adjusted size for logos (around 1 cm) */
-    height: 1cm; /* Adjusted size for logos (around 1 cm) */
-    margin: 0 5px; /* Add space between logos */
+    width: 1cm;
+    height: 1cm;
+    margin: 0 5px;
 }
