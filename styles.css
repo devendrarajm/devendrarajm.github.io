@@ -1,3 +1,11 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Set font family */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 /* Reset CSS */
 * {
     margin: 0;
@@ -7,22 +15,16 @@
 
 /* Global Styles */
 body {
-    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #ffffff; /* Set the entire screen to white */
     color: #333;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
 }
 
 .container {
     max-width: 960px;
-    width: 100%;
+    margin: 0 auto;
     padding: 20px;
 }
 
@@ -43,7 +45,7 @@ a:hover {
 header {
     background-color: #ffffff; /* Set header background to white */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
+    padding: 10px 20px; /* Reduce padding to make the header compact */
     position: relative;
     width: 100%;
     display: flex;
@@ -54,23 +56,19 @@ header {
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold; /* Make the name prominent */
-    margin-left: 20px;
     white-space: nowrap; /* Ensure the name appears in a single line */
 }
 
 .navbar {
     display: flex;
     align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .navbar-nav {
     display: flex;
     list-style-type: none;
-    margin-right: 20px;
-}
-
-.navbar-nav.active {
-    display: block;
 }
 
 .nav-item {
@@ -220,4 +218,17 @@ footer {
     .about-contents {
         text-align: left;
     }
+}
+
+/* Additional Styles */
+kbd,
+.kbd {
+    background-color: #f6f5f5 !important;
+}
+
+/* Copyright Styles */
+.copyright {
+    font-size: 7px;
+    margin-top: 10px;
+    display: block;
 }
