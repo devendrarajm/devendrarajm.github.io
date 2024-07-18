@@ -59,7 +59,8 @@ body {
 .about {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 10px;
+    align-items: center;
 }
 
 .about-entity {
@@ -72,7 +73,7 @@ body {
 
 .about-image {
     border-radius: 0;
-    width: 150px;
+    width: 175px;
     height: auto;
     margin-bottom: 10px;
 }
@@ -94,6 +95,7 @@ body {
     flex: 2;
     min-width: 300px;
     margin-left: 20px;
+    margin-top: -10px; /* Adjust this value to move the intro content upwards */
 }
 
 .quarto-title {
@@ -110,7 +112,7 @@ p {
 
 .copyright {
     margin-top: 30px;
-    font-size: 14px;
+    font-size: 12px; /* Reduced font size */
     color: #666;
 }
 
@@ -132,6 +134,11 @@ p {
 
     .nav-item {
         margin: 10px 0;
+    }
+
+    .toggle-button {
+        position: absolute;
+        left: 20px; /* Move the toggle button to the left corner */
     }
 }
 
