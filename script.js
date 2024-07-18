@@ -9,17 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
       event.preventDefault();
       const target = this.getAttribute('data-target');
 
-      // Remove active class from all sections and nav links
       sections.forEach(section => section.classList.remove('active'));
       navLinks.forEach(link => link.classList.remove('active'));
 
-      // Add active class to the clicked nav link and the corresponding section
       this.classList.add('active');
       document.getElementById(target).classList.add('active');
     });
   });
 
-  // Toggle navigation for mobile view
   toggleButton.addEventListener('click', function() {
     navLinksContainer.classList.toggle('active');
     toggleButton.classList.toggle('active');
