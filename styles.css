@@ -26,14 +26,12 @@ body {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #ccc;
-    padding-left: 50px; /* Add left padding to the navbar */
 }
 
 .navbar-brand {
     font-size: 28px;
     font-weight: bold;
     margin: 0;
-    padding-left: 30px; /* Add left padding to the name */ 
 }
 
 .navbar-brand a {
@@ -57,6 +55,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center; /* Center navigation items */
 }
 
 .nav-item {
@@ -67,6 +66,19 @@ body {
     text-decoration: none;
     color: #333;
     font-size: 18px;
+}
+
+/* Adjusted the styling for the site title */
+.site-title {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 30px; /* Slightly reduced font size */
+}
+
+/* Adjusted the divider styling */
+.navbar-divider {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
 }
 
 /* About Section Styles */
