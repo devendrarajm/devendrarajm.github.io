@@ -18,9 +18,20 @@ body {
     padding: 20px;
 }
 
+.header .name {
+    white-space: nowrap; /* Prevent the name from breaking into multiple lines on desktop */
+}
+
 .header .name, .header nav {
     position: relative;
     top: -20px; /* Adjust this value to move both the name and the navigation tabs up */
+}
+
+/* Mobile view styles */
+@media (max-width: 768px) { /* Adjust the max-width as needed for mobile view */
+    .header .name {
+        white-space: normal; /* Allow the name to break into multiple lines on mobile */
+    }
 }
 
 /* Navbar Styles */
