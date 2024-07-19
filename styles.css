@@ -36,51 +36,31 @@ body {
 
 .navbar-brand a {
     text-decoration: none;
-    color: #000;
+    color: #000; /* Black color for the name */
 }
 
-.toggle-button {
-    display: none;
-    font-size: 24px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.navbar-nav {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Center navigation items */
-}
-
-.nav-item {
-    margin-left: 10px; /* Reduced spacing between tabs */
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
-
-/* Adjusted the styling for the site title */
+/* Removed underline for the site title */
 .site-title {
-    margin: 0; /* Removed left margin */
+    margin-left: 10px;
     font-weight: bold;
-    font-size: 30px; /* Slightly reduced font size */
-    color: #000; /* Black color */
-    display: inline-block;
+    font-size: 30px; /* Consistent font size */
 }
 
 /* Adjusted the divider styling */
 .navbar-divider {
     margin-top: 10px;
     border-top: 1px solid #ccc;
+}
+
+/* Navigation tabs spacing */
+.nav-item {
+    margin-left: 1.5cm; /* Spacing between tabs */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000; /* Ensure black color for consistency */
+    font-size: 18px; /* Consistent font size */
 }
 
 /* About Section Styles */
