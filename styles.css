@@ -8,13 +8,13 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    font-size: 17px;
+    font-size: 17px; /* Increased base font size */
 }
 
 .container {
     width: 85%;
-    max-width: 1050px;
-    margin: 0 auto;
+    max-width: 1050px; /* Reduced max-width for a more compact layout */
+    margin: 0 auto; /* Center the container */
     padding: 20px;
 }
 
@@ -22,93 +22,34 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
+    justify-content: space-between; /* Space between name and nav */
+    padding: 10px 0; /* Reduced padding for a more compact look */
+    border-bottom: none;
 }
 
 .header .name {
-    font-size: 26px;
+    font-size: 26px; /* Adjusted font size for name */
     font-weight: bold;
-    color: #000;
-    white-space: nowrap;
+    margin: 0;
+    color: #000; /* Black color */
+    white-space: nowrap; /* Prevent the name from breaking into multiple lines on desktop */
 }
 
 .header nav {
     display: flex;
     align-items: center;
+    margin: 0;
 }
 
-/* Mobile View */
-@media (max-width: 768px) {
+/* Mobile view styles */
+@media (max-width: 768px) { /* Adjust the max-width as needed for mobile view */
     .header .name {
-        white-space: normal;
-        font-size: 22px;
+        white-space: normal; /* Allow the name to break into multiple lines on mobile */
+        font-size: 22px; /* Adjusted font size for mobile view */
     }
 
     .header {
-        padding: 10px 0;
-    }
-
-    .toggle-button {
-        display: block;
-    }
-
-    .navbar-nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #fff;
-        width: 100%;
-        z-index: 1000;
-    }
-
-    .navbar-nav.active {
-        display: flex;
-    }
-
-    .nav-item {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .about {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-entity, .about-contents {
-        margin: 0;
-    }
-
-    .about-contents {
-        margin-top: 20px;
-    }
-
-    .gallery-item {
-        width: 100%;
-    }
-
-    .gallery-item img {
-        width: 100%;
-    }
-
-    .book-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 20px;
-    }
-    
-    .book-item {
-        padding: 15px;
-    }
-    
-    .book-item h3 {
-        font-size: 24px;
-    }
-    
-    .book-item p {
-        font-size: 0.8rem;
+        padding: 10px 0; /* Ensure compactness on mobile */
     }
 }
 
@@ -116,7 +57,8 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    padding: 0;
+    padding: 0; /* Remove padding to avoid overlap */
+    border-bottom: none;
 }
 
 .navbar-nav {
@@ -124,24 +66,40 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Align tabs to the right */
 }
 
 .nav-item {
-    margin-left: 1em;
+    margin-left: 1em; /* Reduced space between navigation tabs */
 }
 
 .nav-item a {
-    padding: 0.5rem 0.75rem;
-    font-size: 17px;
+    padding: 0.5rem 0.75rem; /* Adjusted padding for a more compact look */
+    font-size: 17px; /* Adjust font size to match body content size */
     color: #333;
     text-decoration: none;
+}
+
+/* Remove the horizontal and vertical lines */
+.navbar-divider {
+    display: none; /* Remove unnecessary divider */
+}
+
+/* Remove toggle button in desktop view */
+.toggle-button {
+    display: none;
+}
+
+/* Remove the horizontal and vertical lines */
+.navbar-divider {
+    display: none; /* Remove unnecessary divider */
 }
 
 /* About Section Styles */
 .about {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 0; /* Removed top margin for a more compact look */
     align-items: flex-start;
 }
 
@@ -154,8 +112,10 @@ body {
 }
 
 .about-image {
+    width: auto;
     height: 4.5cm;
-    margin: -1cm 0 10px 0;
+    margin-bottom: 10px;
+    margin-top: -1cm;
 }
 
 .about-links {
@@ -184,7 +144,7 @@ body {
 }
 
 .quarto-title {
-    font-size: 24px;
+    font-size: 24px; /* Updated font size */
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -196,8 +156,9 @@ p {
 
 .copyright {
     margin-top: 30px;
-    font-size: 10px;
+    font-size: 10px; /* Updated font size */
     color: #666;
+    font-weight: normal; /* Removed bold weight */
 }
 
 /* Books Styles */
@@ -206,7 +167,7 @@ p {
 }
 
 .section-title {
-    font-size: 24px;
+    font-size: 24px; /* Updated font size to match other headings */
     margin-bottom: 1em;
 }
 
@@ -237,7 +198,7 @@ p {
 }
 
 .book-item h3 {
-    font-size: 24px;
+    font-size: 24px; /* Updated font size */
     margin-bottom: 10px;
 }
 
@@ -288,4 +249,70 @@ p {
 /* Talks Section Styles */
 .talks-section p {
     margin-bottom: 1em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block;
+    }
+
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        width: auto;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        z-index: 1000;
+    }
+
+    .navbar-nav.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-entity, .about-contents {
+        margin: 0;
+    }
+
+    .about-contents {
+        margin-top: 20px;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    .gallery-item img {
+        height: auto;
+        width: 100%;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .book-item {
+        padding: 15px;
+    }
+    
+    .book-item h3 {
+        font-size: 24px; /* Updated font size */
+    }
+    
+    .book-item p {
+        font-size: 0.8rem;
+    }
 }
