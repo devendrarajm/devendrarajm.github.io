@@ -21,7 +21,7 @@ body {
 /* Navbar Styles */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -32,22 +32,17 @@ body {
     font-size: 26px; /* Updated font size for desktop view */
     font-weight: bold;
     margin: 0;
-    margin-left: -3.5cm; /* Move the name 3.5cm to the left */
 }
 
 .navbar-brand a {
     text-decoration: none; /* No underline */
     color: #000; /* Black color */
-}
-
-/* Ensure name appears in a single line, no URL link appearance */
-.navbar-brand a {
     display: inline; /* Remove any default link styling */
     font-size: 26px; /* Consistent font size */
     font-weight: bold;
 }
 
-/* Remove toggle button in desktop view */
+/* Toggle Button */
 .toggle-button {
     display: none;
     font-size: 24px;
@@ -59,37 +54,23 @@ body {
     right: 20px;
 }
 
+/* Navigation Menu */
 .navbar-nav {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center navigation items */ 
+    margin-left: 1.5cm; /* Ensure 1.5 cm space from brand name */
 }
 
 .nav-item {
-    margin-left: 1cm; /* Adjusted spacing between tabs */
+    margin-left: 1.5cm; /* 1.5 cm spacing between tabs */
 }
 
 .nav-link {
     text-decoration: none;
     color: #333;
     font-size: 18px;
-}
-
-/* Adjusted the styling for the site title */
-.site-title {
-    margin: 0; /* Removed left margin */
-    font-weight: bold;
-    font-size: 26px; /* Updated font size for desktop view */
-    color: #000; /* Black color */
-    display: inline-block;
-}
-
-/* Adjusted the divider styling */
-.navbar-divider {
-    margin-top: 10px;
-    border-top: 1px solid #ccc;
 }
 
 /* About Section Styles */
