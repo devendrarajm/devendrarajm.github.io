@@ -6,110 +6,15 @@
     <title>Devendraraj Madhanagopal</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 90%;
-            margin: 0 auto;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-        }
-        .navbar-brand {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .navbar {
-            display: flex;
-            align-items: center;
-        }
-        .navbar-nav {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            margin-left: 2.5cm;
-        }
-        .nav-item {
-            margin-left: 1cm;
-        }
-        .nav-link {
-            text-decoration: none;
-            color: #000;
-            font-size: 18px;
-        }
-        .toggle-button {
-            display: none;
-        }
-        .about {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .about-entity {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .about-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-        .about-links {
-            display: flex;
-            flex-direction: column;
-        }
-        .about-link {
-            margin-bottom: 10px;
-        }
-        .about-link img {
-            width: 30px;
-            height: 30px;
-        }
-        .about-contents {
-            text-align: center;
-        }
-        .quarto-title {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        .copyright {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #888;
-        }
-        @media (max-width: 768px) {
-            .toggle-button {
-                display: block;
-            }
-            .navbar-nav {
-                display: none;
-                flex-direction: column;
-                margin: 0;
-            }
-            .navbar-nav.active {
-                display: flex;
-            }
-            .nav-item {
-                margin-left: 0;
-                margin-bottom: 10px;
-            }
-        }
-    </style>
 </head>
 <body>
     <header class="container">
-        <div class="navbar-brand">Devendraraj Madhanagopal</div>
         <nav class="navbar">
-            <button class="toggle-button" onclick="toggleNav()">☰</button>
+            <h1 class="site-title">
+                <a href="index.html">Devendraraj Madhanagopal</a>
+            </h1>
+            <hr class="navbar-divider">
+            <button class="toggle-button">☰</button>
             <ul class="navbar-nav" id="nav-links">
                 <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
                 <li class="nav-item"><a href="employment.html" class="nav-link">Employment</a></li>
@@ -153,10 +58,5 @@
         </section>
     </main>
     <script src="script.js"></script>
-    <script>
-        function toggleNav() {
-            document.getElementById('nav-links').classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
