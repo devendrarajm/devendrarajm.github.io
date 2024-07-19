@@ -70,14 +70,19 @@ body {
 }
 
 .nav-item {
-    margin-left: 0.5cm; /* Distance between navigation tabs */
+    margin-left: 1em; /* Reduced space between navigation tabs */
 }
 
 .nav-item a {
-    padding: 0.5rem 0.75rem; /* Reduce padding for a more compact look */
+    padding: 0.5rem 0.75rem; /* Adjusted padding for a more compact look */
     font-size: 17px; /* Adjust font size to match body content size */
     color: #333;
     text-decoration: none;
+}
+
+/* Remove the horizontal and vertical lines */
+.navbar-divider {
+    display: none; /* Remove unnecessary divider */
 }
 
 /* Remove toggle button in desktop view */
