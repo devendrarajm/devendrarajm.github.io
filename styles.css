@@ -23,7 +23,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0.5rem 0;
-    border-bottom: 1px solid #ccc; /* Thin horizontal line below name */
+    border-bottom: none;
 }
 
 .navbar-brand {
