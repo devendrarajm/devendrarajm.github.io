@@ -63,7 +63,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center navigation items */
+    justify-content: center; /* Center navigation items */ 
 }
 
 .nav-item {
