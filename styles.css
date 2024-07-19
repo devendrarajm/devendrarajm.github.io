@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    font-size: 17px; /* Increased base font size */
+    font-size: 19px; /* Updated base font size */
 }
 
 .container {
@@ -21,30 +21,27 @@ body {
 /* Navbar Styles */
 .navbar {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #ccc;
-    position: relative;
+    padding: 0.5rem 0;
 }
 
 .navbar-brand {
-    font-size: 26px; /* Updated font size for desktop view */
+    font-size: 19px; /* Updated font size for desktop view */
     font-weight: bold;
     margin: 0;
-    white-space: nowrap; /* Ensure name is in a single line */
+    margin-left: -3.5cm; /* Move the name 3.5cm to the left */
 }
 
 .navbar-brand a {
     text-decoration: none; /* No underline */
     color: #000; /* Black color */
-    display: inline; /* Remove any default link styling */
-    font-size: 26px; /* Consistent font size */
+    display: inline; /* Ensure single line on desktop view */
+    font-size: 19px; /* Consistent font size */
     font-weight: bold;
 }
 
-/* Toggle Button */
+/* Toggle button */
 .toggle-button {
     display: none;
     font-size: 24px;
@@ -56,32 +53,31 @@ body {
     right: 20px;
 }
 
-/* Navigation Menu */
 .navbar-nav {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    margin-left: 1.5cm; /* Ensure 1.5 cm space from brand name */
+    justify-content: center; /* Center navigation items */
 }
 
 .nav-item {
-    margin-left: 1cm; /* 1 cm spacing between tabs */
+    margin-left: 1cm; /* Adjusted spacing between tabs */
 }
 
 .nav-link {
     text-decoration: none;
     color: #333;
-    font-size: 18px;
+    font-size: 19px; /* Updated font size */
 }
 
-/* Horizontal Line */
-.navbar-divider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-top: 1px solid #ccc;
+/* Site Title */
+.site-title {
+    margin: 0; /* Removed left margin */
+    font-weight: bold;
+    font-size: 24px; /* Updated font size */
+    color: #000; /* Black color */
+    display: inline-block;
 }
 
 /* About Section Styles */
@@ -132,24 +128,27 @@ body {
     margin-top: -2.3cm;
 }
 
+/* Quarto Title */
 .quarto-title {
     font-size: 24px; /* Updated font size */
     font-weight: bold;
     margin-bottom: 20px;
 }
 
+/* Paragraphs */
 p {
-    font-size: 16px;
+    font-size: 19px; /* Updated font size */
     margin-bottom: 20px;
 }
 
+/* Copyright Text */
 .copyright {
     margin-top: 30px;
     font-size: 10px; /* Updated font size */
     color: #666;
 }
 
-/* Books Styles */
+/* Books Section */
 .books {
     margin-top: 2em;
 }
@@ -192,7 +191,7 @@ p {
 
 .book-item .book-details p {
     margin: 5px 0;
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Approximately 14.4px */
 }
 
 .book-item .book-details a {
@@ -239,14 +238,22 @@ p {
     margin-bottom: 1em;
 }
 
+/* Search Tab */
+.search-tab {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.search-tab input[type="text"] {
+    font-size: 19px; /* Updated font size */
+    padding: 5px;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .toggle-button {
         display: block;
-    }
-
-    .navbar-brand {
-        white-space: normal; /* Allow name to break into multiple lines */
     }
 
     .navbar-nav {
@@ -267,6 +274,10 @@ p {
     .nav-item {
         margin: 10px 0;
         text-align: center;
+    }
+
+    .navbar-brand {
+        font-size: 19px; /* Allow breaking on smaller screens */
     }
 
     .about {
@@ -305,6 +316,6 @@ p {
     }
     
     .book-item p {
-        font-size: 0.8rem;
+        font-size: 0.8rem; /* Approximately 12.8px */
     }
 }
