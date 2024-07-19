@@ -39,6 +39,14 @@ body {
     color: #000; /* Black color */
 }
 
+/* Ensure name appears in a single line, no URL link appearance */
+.navbar-brand a {
+    display: inline; /* Remove any default link styling */
+    font-size: 28px; /* Consistent font size */
+    font-weight: bold;
+}
+
+/* Remove toggle button in desktop view */
 .toggle-button {
     display: none;
     font-size: 24px;
@@ -59,7 +67,7 @@ body {
 }
 
 .nav-item {
-    margin-left: 1.5cm; /* Spacing between tabs */
+    margin-left: 1cm; /* Adjusted spacing between tabs */
 }
 
 .nav-link {
