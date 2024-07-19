@@ -8,13 +8,13 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    font-size: 18px; /* General content font size */
+    font-size: 17px; /* Increased base font size */
 }
 
 .container {
     width: 85%;
-    max-width: 1050px;
-    margin: 0 auto;
+    max-width: 1050px; /* Reduced max-width for a more compact layout */
+    margin: 0 auto; /* Center the container */
     padding: 20px;
 }
 
@@ -23,46 +23,51 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #ccc; /* Thin border line */
-    position: relative; /* To position the horizontal line */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ccc;
 }
 
 .navbar-brand {
-    font-size: 18px; /* Updated font size */
+    font-size: 24px; /* Adjusted font size to match heading requirements */
     font-weight: bold;
     margin: 0;
-    margin-right: 1cm; /* Move name 1cm to the left for right alignment */
 }
 
 .navbar-brand a {
-    text-decoration: none;
-    color: #000;
-    display: inline;
-    font-size: 18px; /* Consistent font size */
+    text-decoration: none; /* No underline */
+    color: #000; /* Black color */
+}
+
+/* Ensure name appears in a single line, no URL link appearance */
+.navbar-brand a {
+    display: inline; /* Remove any default link styling */
+    font-size: 24px; /* Consistent font size */
     font-weight: bold;
 }
 
-.search-container {
-    margin-left: auto;
+/* Remove toggle button in desktop view */
+.toggle-button {
+    display: none;
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
-.search-container input {
-    padding: 5px;
-    font-size: 18px;
-}
-
-/* Navigation Tabs */
 .navbar-nav {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center;
+    justify-content: center; /* Center navigation items */
 }
 
 .nav-item {
-    margin-left: 1cm; /* Distance between tabs */
+    margin-left: 1cm; /* Adjusted spacing between tabs */
 }
 
 .nav-link {
@@ -71,14 +76,19 @@ body {
     font-size: 18px;
 }
 
-/* Header Line */
+/* Adjusted the styling for the site title */
+.site-title {
+    margin: 0; /* Removed left margin */
+    font-weight: bold;
+    font-size: 24px; /* Consistent font size */
+    color: #000; /* Black color */
+    display: inline-block;
+}
+
+/* Adjusted the divider styling */
 .navbar-divider {
-    position: absolute;
-    bottom: -1px; /* 1px from the bottom of the navbar */
-    left: 0;
-    width: 100%;
-    height: 1px; /* Thin line */
-    background-color: #ccc;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
 }
 
 /* About Section Styles */
@@ -95,44 +105,56 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 1cm; /* Margin for vertical line */
 }
 
 .about-image {
     width: auto;
     height: 4.5cm;
     margin-bottom: 10px;
+    margin-top: -1cm;
+}
+
+.about-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.about-link {
+    width: 33.33%;
+    text-align: center;
+}
+
+.about-link img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
 }
 
 .about-contents {
     flex: 2;
     min-width: 300px;
     margin-left: 20px;
+    margin-top: -2.3cm;
 }
 
-/* Vertical Line Divider */
-.profile-divider {
-    border-left: 1px solid #ccc;
-    height: auto;
-    margin: 0 1cm; /* Margin between profile photo and intro content */
-}
-
-/* Quarto Title */
 .quarto-title {
-    font-size: 22px; /* Updated font size */
+    font-size: 24px; /* Updated font size */
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-/* Paragraphs */
 p {
-    font-size: 22px; /* Updated font size */
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
-/* Copyright Text */
 .copyright {
+    margin-top: 30px;
     font-size: 10px; /* Updated font size */
     color: #666;
+    font-weight: normal; /* Removed bold weight */
 }
 
 /* Books Styles */
@@ -141,7 +163,7 @@ p {
 }
 
 .section-title {
-    font-size: 22px; /* Updated font size */
+    font-size: 24px; /* Updated font size to match other headings */
     margin-bottom: 1em;
 }
 
@@ -172,12 +194,13 @@ p {
 }
 
 .book-item h3 {
-    font-size: 22px; /* Updated font size */
+    font-size: 24px; /* Updated font size */
     margin-bottom: 10px;
 }
 
 .book-item .book-details p {
-    font-size: 0.9rem; /* Approximately 14.4px */
+    margin: 5px 0;
+    font-size: 0.9rem;
 }
 
 .book-item .book-details a {
@@ -282,10 +305,10 @@ p {
     }
     
     .book-item h3 {
-        font-size: 22px; /* Updated font size */
+        font-size: 24px; /* Updated font size */
     }
     
     .book-item p {
-        font-size: 0.8rem; /* Approximately 12.8px */
+        font-size: 0.8rem;
     }
 }
