@@ -29,9 +29,10 @@ body {
 }
 
 .navbar-brand {
-    font-size: 24px; /* Adjusted font size to match heading requirements */
+    font-size: 26px; /* Adjusted font size */
     font-weight: bold;
     margin: 0;
+    margin-left: 3.5cm; /* Adjusted position for left alignment */
 }
 
 .navbar-brand a {
@@ -39,10 +40,10 @@ body {
     color: #000; /* Black color */
 }
 
-/* Ensure name appears in a single line, no URL link appearance */
+/* Ensure name appears in a single line */
 .navbar-brand a {
     display: inline; /* Remove any default link styling */
-    font-size: 24px; /* Consistent font size */
+    font-size: 26px; /* Consistent font size */
     font-weight: bold;
 }
 
@@ -67,7 +68,7 @@ body {
 }
 
 .nav-item {
-    margin-left: 1cm; /* Adjusted spacing between tabs */
+    margin-left: 0.5cm; /* Adjusted spacing between tabs */
 }
 
 .nav-link {
