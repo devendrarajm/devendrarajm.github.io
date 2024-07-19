@@ -18,62 +18,55 @@ body {
     padding: 20px;
 }
 
-/* Header Styles */
-.header {
+/* Navbar Styles */
+.navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem;
-    border-bottom: 1px solid #ccc;
+    flex-direction: column; /* Arrange name and nav items vertically */
+    align-items: center; /* Center horizontally */
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc; /* Horizontal line */
 }
 
-/* Ensure the name stays in one line */
 .navbar-brand {
-    font-size: 26px; /* Adjusted font size for consistency */
+    font-size: 26px; /* Consistent font size */
     font-weight: bold;
     margin: 0;
-    white-space: nowrap; /* Prevent line break */
+    text-align: center; /* Center name */
+    margin-bottom: 10px; /* Space between name and nav items */
 }
 
-/* Ensure name appears as a single line */
 .navbar-brand a {
     text-decoration: none; /* No underline */
     color: #000; /* Black color */
-    display: inline; /* Remove any default link styling */
+    display: inline; /* Ensure inline display */
 }
 
-/* Navbar and Navigation Tabs */
+/* Navigation Tabs Styles */
 .navbar-nav {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center navigation items */
+    flex-wrap: wrap; /* Allow wrapping if needed */
 }
 
 .nav-item {
-    margin-left: 1cm; /* Consistent spacing between tabs */
+    margin: 0 15px; /* Adjusted spacing between tabs */
 }
 
 .nav-link {
     text-decoration: none;
     color: #333;
-    font-size: 18px;
-}
-
-/* Adjusted the styling for the site title */
-.site-title {
-    margin: 0; /* Removed left margin */
-    font-weight: bold;
-    font-size: 24px; /* Consistent font size */
-    color: #000; /* Black color */
+    font-size: 18px; /* Font size for navigation tabs */
     display: inline-block;
 }
 
-/* Adjusted the divider styling */
+/* Ensure horizontal line is consistent */
 .navbar-divider {
     margin-top: 10px;
     border-top: 1px solid #ccc;
+    width: 100%;
 }
 
 /* About Section Styles */
@@ -234,17 +227,8 @@ p {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column; /* Stack header items vertically in mobile view */
-        align-items: flex-start;
-    }
-
-    .navbar {
-        flex-direction: column; /* Stack navbar items vertically */
-    }
-
     .toggle-button {
-        display: block; /* Display toggle button only in mobile view */
+        display: block;
     }
 
     .navbar-nav {
@@ -304,11 +288,5 @@ p {
     
     .book-item p {
         font-size: 0.8rem;
-    }
-}
-
-@media (min-width: 769px) {
-    .toggle-button {
-        display: none; /* Hide toggle button in desktop view */
     }
 }
