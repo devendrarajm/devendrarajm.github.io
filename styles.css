@@ -33,7 +33,6 @@ body {
     font-size: 26px; /* Updated font size for desktop view */
     font-weight: bold;
     margin: 0;
-    margin-left: 0;/* Removed negative margin */
 }
 
 .navbar-brand a {
@@ -57,11 +56,16 @@ body {
     display: inline-block;
 }
 
-/* Adjusted the divider styling */
-.navbar-divider {
-    margin-top: 10px;
-    border-top: 1px solid #ccc;
+/* Toggle button styles */
+.toggle-button {
+    display: none; /* Hide toggle button in desktop view */
 }
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block; /* Show toggle button in mobile view */
+    }
 
 /* About Section Styles */
 .about {
