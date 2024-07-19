@@ -8,57 +8,44 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    font-size: 17px; /* Increased base font size */
+    font-size: 18px; /* Body text font size */
 }
 
+/* Container Styles */
 .container {
     width: 85%;
-    max-width: 1050px; /* Reduced max-width for a more compact layout */
-    margin: 0 auto; /* Center the container */
+    max-width: 1050px;
+    margin: 0 auto;
     padding: 20px;
 }
 
 /* Header Styles */
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #F7F7F7;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space between name and nav */
-    padding: 10px 0; /* Reduced padding for a more compact look */
-    border-bottom: none;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
 .header .name {
-    font-size: 26px; /* Adjusted font size for name */
+    font-size: 22px; /* Font size for name */
     font-weight: bold;
+    color: #333; /* Dark gray color */
     margin: 0;
-    color: #000; /* Black color */
-    white-space: nowrap; /* Prevent the name from breaking into multiple lines on desktop */
 }
 
 .header nav {
     display: flex;
     align-items: center;
-    margin: 0;
-}
-
-/* Mobile view styles */
-@media (max-width: 768px) { /* Adjust the max-width as needed for mobile view */
-    .header .name {
-        white-space: normal; /* Allow the name to break into multiple lines on mobile */
-        font-size: 22px; /* Adjusted font size for mobile view */
-    }
-
-    .header {
-        padding: 10px 0; /* Ensure compactness on mobile */
-    }
-}
-
-/* Navbar Styles */
-.navbar {
-    display: flex;
-    align-items: center;
-    padding: 0; /* Remove padding to avoid overlap */
-    border-bottom: none;
 }
 
 .navbar-nav {
@@ -66,40 +53,56 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start; /* Align tabs to the right */
+    align-items: center;
 }
 
 .nav-item {
-    margin-left: 1em; /* Reduced space between navigation tabs */
+    margin-left: 10px; /* Horizontal spacing */
 }
 
 .nav-item a {
-    padding: 0.5rem 0.75rem; /* Adjusted padding for a more compact look */
-    font-size: 17px; /* Adjust font size to match body content size */
+    font-size: 14px; /* Font size for navigation tabs */
     color: #333;
     text-decoration: none;
+    padding: 10px; /* Horizontal padding */
 }
 
-/* Remove the horizontal and vertical lines */
-.navbar-divider {
-    display: none; /* Remove unnecessary divider */
+.nav-item a.active {
+    border-bottom: 2px solid #007bff; /* Underline for active tab */
 }
 
-/* Remove toggle button in desktop view */
-.toggle-button {
-    display: none;
-}
+/* Mobile view styles */
+@media (max-width: 768px) {
+    .header .name {
+        font-size: 18px; /* Adjusted font size for mobile */
+    }
 
-/* Remove the horizontal and vertical lines */
-.navbar-divider {
-    display: none; /* Remove unnecessary divider */
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        width: auto;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        z-index: 1000;
+    }
+
+    .navbar-nav.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        text-align: center;
+    }
 }
 
 /* About Section Styles */
 .about {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 0; /* Removed top margin for a more compact look */
+    margin-top: 80px; /* Account for fixed header */
     align-items: flex-start;
 }
 
@@ -109,13 +112,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .about-image {
     width: auto;
     height: 4.5cm;
     margin-bottom: 10px;
-    margin-top: -1cm;
 }
 
 .about-links {
@@ -140,42 +143,41 @@ body {
     flex: 2;
     min-width: 300px;
     margin-left: 20px;
-    margin-top: -2.3cm;
 }
 
 .quarto-title {
-    font-size: 24px; /* Updated font size */
+    font-size: 22px; /* Font size for titles */
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px; /* Font size for paragraphs */
     margin-bottom: 20px;
 }
 
 .copyright {
     margin-top: 30px;
-    font-size: 10px; /* Updated font size */
+    font-size: 14px; /* Font size for copyright */
     color: #666;
-    font-weight: normal; /* Removed bold weight */
+    font-weight: normal;
 }
 
 /* Books Styles */
 .books {
-    margin-top: 2em;
+    margin-top: 20px;
 }
 
 .section-title {
-    font-size: 24px; /* Updated font size to match other headings */
-    margin-bottom: 1em;
+    font-size: 22px; /* Font size for section titles */
+    margin-bottom: 20px;
 }
 
 .book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 30px;
-    margin-top: 2rem;
+    margin-top: 20px;
 }
 
 .book-item {
@@ -198,13 +200,13 @@ p {
 }
 
 .book-item h3 {
-    font-size: 24px; /* Updated font size */
+    font-size: 20px; /* Font size for book titles */
     margin-bottom: 10px;
 }
 
 .book-item .book-details p {
     margin: 5px 0;
-    font-size: 0.9rem;
+    font-size: 16px; /* Font size for book details */
 }
 
 .book-item .book-details a {
@@ -243,51 +245,18 @@ p {
 /* Content Section Styles */
 .content-section p,
 .content-section li {
-    margin-bottom: 1em;
+    margin-bottom: 20px; /* Consistent vertical spacing */
 }
 
 /* Talks Section Styles */
 .talks-section p {
-    margin-bottom: 1em;
+    margin-bottom: 20px; /* Consistent vertical spacing */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     .toggle-button {
         display: block;
-    }
-
-    .navbar-nav {
-        display: none;
-        flex-direction: column;
-        width: auto;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #fff;
-        z-index: 1000;
-    }
-
-    .navbar-nav.active {
-        display: flex;
-    }
-
-    .nav-item {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .about {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-entity, .about-contents {
-        margin: 0;
-    }
-
-    .about-contents {
-        margin-top: 20px;
     }
 
     .gallery-item {
@@ -309,10 +278,10 @@ p {
     }
     
     .book-item h3 {
-        font-size: 24px; /* Updated font size */
+        font-size: 18px; /* Adjusted font size for mobile */
     }
     
     .book-item p {
-        font-size: 0.8rem;
+        font-size: 16px; /* Adjusted font size for mobile */
     }
 }
