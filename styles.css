@@ -244,7 +244,7 @@ p {
     }
 
     .toggle-button {
-        display: block;
+        display: block; /* Display toggle button only in mobile view */
     }
 
     .navbar-nav {
@@ -304,5 +304,11 @@ p {
     
     .book-item p {
         font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .toggle-button {
+        display: none; /* Hide toggle button in desktop view */
     }
 }
