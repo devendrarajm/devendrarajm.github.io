@@ -20,7 +20,7 @@ body {
 
 .header .name, .header nav {
     position: relative;
-    top: -10px; /* Adjust this value to move both the name and the navigation tabs up */
+    top: -20px; /* Adjust this value to move both the name and the navigation tabs up */
 }
 
 /* Navbar Styles */
