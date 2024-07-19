@@ -23,8 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0;
     border-bottom: 1px solid #ccc; /* Thin border line */
     position: relative; /* To position the horizontal line */
 }
@@ -33,7 +32,7 @@ body {
     font-size: 18px; /* Updated font size */
     font-weight: bold;
     margin: 0;
-    margin-left: 1cm; /* Move name 1cm to the right */
+    margin-right: 1cm; /* Move name 1cm to the left for right alignment */
 }
 
 .navbar-brand a {
@@ -44,13 +43,22 @@ body {
     font-weight: bold;
 }
 
+.search-container {
+    margin-left: auto;
+}
+
+.search-container input {
+    padding: 5px;
+    font-size: 18px;
+}
+
 /* Navigation Tabs */
 .navbar-nav {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 .nav-item {
