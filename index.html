@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Include title.html for the name -->
+    <div id="header-container"></div>
+    
     <header class="container">
         <nav class="navbar">
-            <h1 class="navbar-brand"><span>Devendraraj</span><span>Madhanagopal</span></h1>
             <button class="toggle-button" onclick="toggleNav()">☰</button>
             <ul class="navbar-nav" id="nav-links">
                 <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
@@ -55,5 +57,15 @@
         </section>
     </main>
     <script src="script.js"></script>
+    <script>
+        // Load the title.html into the header-container div
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('title.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                });
+        });
+    </script>
 </body>
 </html>
