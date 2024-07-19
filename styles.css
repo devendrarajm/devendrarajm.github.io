@@ -18,57 +18,41 @@ body {
     padding: 20px;
 }
 
-/* Navbar Styles */
-.navbar {
+/* Header Styles */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem;
     border-bottom: 1px solid #ccc;
 }
 
+/* Ensure the name stays in one line */
 .navbar-brand {
-    font-size: 26px; /* Adjusted font size */
+    font-size: 26px; /* Adjusted font size for consistency */
     font-weight: bold;
     margin: 0;
-    margin-left: 3.5cm; /* Adjusted position for left alignment */
+    white-space: nowrap; /* Prevent line break */
 }
 
+/* Ensure name appears as a single line */
 .navbar-brand a {
     text-decoration: none; /* No underline */
     color: #000; /* Black color */
-}
-
-/* Ensure name appears in a single line */
-.navbar-brand a {
     display: inline; /* Remove any default link styling */
-    font-size: 26px; /* Consistent font size */
-    font-weight: bold;
 }
 
-/* Remove toggle button in desktop view */
-.toggle-button {
-    display: none;
-    font-size: 24px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
+/* Navbar and Navigation Tabs */
 .navbar-nav {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center navigation items */
+    align-items: center; /* Align items vertically */
 }
 
 .nav-item {
-    margin-left: 0.5cm; /* Adjusted spacing between tabs */
+    margin-left: 1cm; /* Consistent spacing between tabs */
 }
 
 .nav-link {
@@ -250,6 +234,15 @@ p {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack header items vertically in mobile view */
+        align-items: flex-start;
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
     .toggle-button {
         display: block;
     }
