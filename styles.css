@@ -32,12 +32,13 @@ body {
     font-size: 26px; /* Updated font size for desktop view */
     font-weight: bold;
     margin: 0;
-    margin-left: -3.5cm; /* Move the name 3.5cm to the left */
+    margin-left: -1.5cm; /* Removed negative margin */
 }
 
 .navbar-brand a {
     text-decoration: none; /* No underline */
     color: #000; /* Black color */
+    display: inline-block; /* Added to ensure consistent styling */
 }
 
 /* Ensure name appears in a single line, no URL link appearance */
