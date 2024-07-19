@@ -26,12 +26,14 @@ body {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #ccc;
+    position: relative;
 }
 
 .navbar-brand {
     font-size: 26px; /* Updated font size for desktop view */
     font-weight: bold;
     margin: 0;
+    white-space: nowrap; /* Ensure name is in a single line */
 }
 
 .navbar-brand a {
@@ -64,13 +66,22 @@ body {
 }
 
 .nav-item {
-    margin-left: 1.5cm; /* 1.5 cm spacing between tabs */
+    margin-left: 1cm; /* 1 cm spacing between tabs */
 }
 
 .nav-link {
     text-decoration: none;
     color: #333;
     font-size: 18px;
+}
+
+/* Horizontal Line */
+.navbar-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
 }
 
 /* About Section Styles */
@@ -232,6 +243,10 @@ p {
 @media (max-width: 768px) {
     .toggle-button {
         display: block;
+    }
+
+    .navbar-brand {
+        white-space: normal; /* Allow name to break into multiple lines */
     }
 
     .navbar-nav {
