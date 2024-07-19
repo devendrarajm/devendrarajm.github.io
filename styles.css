@@ -23,9 +23,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem;
     border-bottom: 1px solid #ccc;
+    position: relative; /* Ensure the toggle button can be positioned correctly */
 }
 
 .navbar-brand {
@@ -39,11 +39,15 @@ body {
     color: #000; /* Black color for the name */
 }
 
-/* Removed underline for the site title */
+/* Ensure the site title has consistent appearance */
 .site-title {
-    margin-left: 10px;
     font-weight: bold;
     font-size: 30px; /* Consistent font size */
+}
+
+/* Remove underline from site title */
+.site-title a {
+    text-decoration: none;
 }
 
 /* Adjusted the divider styling */
@@ -52,15 +56,29 @@ body {
     border-top: 1px solid #ccc;
 }
 
-/* Navigation tabs spacing */
+/* Navigation tabs styling */
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center navigation items */
+    flex-wrap: wrap;
+}
+
 .nav-item {
-    margin-left: 1.5cm; /* Spacing between tabs */
+    margin: 0 1.5cm; /* Spacing between tabs */
 }
 
 .nav-link {
     text-decoration: none;
     color: #000; /* Ensure black color for consistency */
     font-size: 18px; /* Consistent font size */
+}
+
+/* Hide the toggle button in desktop view */
+.toggle-button {
+    display: none;
 }
 
 /* About Section Styles */
