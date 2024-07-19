@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change this to your default branch if different
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # Adjust as necessary
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build project
+      run: npm run build  # Adjust this command based on your build process
+
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v4
+      with:
+        branch: gh-pages  # The branch where the built files will be deployed
+        folder: build      # The directory where your build files are located
