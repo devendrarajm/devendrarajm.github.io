@@ -30,7 +30,7 @@ body {
     font-size: 26px; /* Adjusted font size for name */
     font-weight: bold;
     margin: 0;
-    margin-right: 2.5cm; /* Space between name and navigation tabs */
+    margin-right: 3cm; /* Space between name and navigation tabs */
 }
 
 .navbar-brand a {
