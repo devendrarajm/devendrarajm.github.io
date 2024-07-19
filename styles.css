@@ -29,9 +29,10 @@ body {
 }
 
 .navbar-brand {
-    font-size: 24px; /* Adjusted font size to match heading requirements */
+    font-size: 26px; /* Updated font size for desktop view */
     font-weight: bold;
     margin: 0;
+    margin-left: -3.5cm; /* Move the name 3.5cm to the left */
 }
 
 .navbar-brand a {
@@ -42,7 +43,7 @@ body {
 /* Ensure name appears in a single line, no URL link appearance */
 .navbar-brand a {
     display: inline; /* Remove any default link styling */
-    font-size: 24px; /* Consistent font size */
+    font-size: 26px; /* Consistent font size */
     font-weight: bold;
 }
 
@@ -63,7 +64,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center navigation items */
+    justify-content: center; /* Center navigation items */ 
 }
 
 .nav-item {
@@ -80,7 +81,7 @@ body {
 .site-title {
     margin: 0; /* Removed left margin */
     font-weight: bold;
-    font-size: 24px; /* Consistent font size */
+    font-size: 26px; /* Updated font size for desktop view */
     color: #000; /* Black color */
     display: inline-block;
 }
@@ -154,7 +155,6 @@ p {
     margin-top: 30px;
     font-size: 10px; /* Updated font size */
     color: #666;
-    font-weight: normal; /* Removed bold weight */
 }
 
 /* Books Styles */
@@ -163,7 +163,7 @@ p {
 }
 
 .section-title {
-    font-size: 24px; /* Updated font size to match other headings */
+    font-size: 24px; /* Updated font size */
     margin-bottom: 1em;
 }
 
