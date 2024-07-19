@@ -46,7 +46,7 @@ body {
     font-size: 26px; /* Adjusted font size for name */
     font-weight: bold;
     margin: 0;
-    margin-right: 3cm; /* Space between name and navigation tabs */
+    margin-right: 2cm; /* Space between name and navigation tabs */
 }
 
 .navbar-brand a {
@@ -65,7 +65,12 @@ body {
 }
 
 .nav-item {
-    margin-left: 1cm; /* Distance between navigation tabs */
+    margin-left: 0.5cm; /* Distance between navigation tabs */
+}
+
+.nav-item a {
+    padding: 0.5rem 0.75rem; /* Reduce padding for a more compact look */
+    font-size: 14px; /* Adjust font size for a more compact look */
 }
 
 .nav-link {
