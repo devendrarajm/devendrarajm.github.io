@@ -63,8 +63,13 @@ body {
 }
 
 .nav-item {
-    margin-left: 2cm; /* Adjust spacing between tabs */
-    margin-right: 2cm; /* Add spacing to the right for consistency */
+    margin-left: 1cm; /* Exact spacing between tabs */
+    margin-right: 1cm; /* Exact spacing to the right for consistency */
+}
+
+/* Remove spacing for the first item */
+.nav-item:first-child {
+    margin-left: 0;
 }
 
 .nav-link {
