@@ -1,6 +1,7 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap';
 
 /* General Styles */
+/* General Styles */
 body {
     font-family: "Roboto", sans-serif;
     background-color: #fff;
@@ -48,37 +49,6 @@ body {
     font-weight: bold;
 }
 
-/* Remove toggle button in desktop view */
-.toggle-button {
-    display: none;
-    font-size: 24px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.navbar-nav {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Center navigation items */ 
-}
-
-.nav-item {
-    margin-left: 1cm; /* Adjusted spacing between tabs */
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
-
-/* Adjusted the styling for the site title */
 .site-title {
     margin: 0; /* Removed left margin */
     font-weight: bold;
