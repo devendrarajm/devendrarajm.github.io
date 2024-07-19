@@ -18,11 +18,17 @@ body {
     padding: 20px;
 }
 
-/* Title Container Styles */
-.title-container {
-    position: absolute;
-    top: 0;
-    left: 1.5cm;
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#header-container {
+    margin-left: 2.5cm;
 }
 
 .navbar-brand {
@@ -30,10 +36,9 @@ body {
     font-weight: bold;
     margin: 0;
     padding: 0;
-}
-
-.navbar-brand span {
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* Navbar Styles */
@@ -64,7 +69,7 @@ body {
 }
 
 .nav-item {
-    margin-left: 20px;
+    margin-left: 1cm; /* Adjusted spacing between navigation items */
 }
 
 .nav-link {
