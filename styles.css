@@ -32,7 +32,7 @@ body {
     font-size: 26px; /* Updated font size for desktop view */
     font-weight: bold;
     margin: 0;
-    margin-left: -1.5cm; /* Removed negative margin */
+    margin-left: 0;/* Removed negative margin */
 }
 
 .navbar-brand a {
