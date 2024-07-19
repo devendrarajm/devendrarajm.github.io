@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.querySelector('.toggle-button');
     const navbarNav = document.querySelector('.navbar-nav');
 
-    // Toggle the navigation menu on mobile devices
     toggleButton.addEventListener('click', function() {
         navbarNav.classList.toggle('active');
     });
@@ -21,16 +20,5 @@ document.addEventListener('DOMContentLoaded', function() {
         if (link.getAttribute('href') === currentPage) {
             link.classList.add('active');
         }
-    });
-
-    // Optional: Add smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
     });
 });
