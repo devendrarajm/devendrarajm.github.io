@@ -49,7 +49,7 @@ body {
 }
 
 .nav-item {
-    margin-left: 1cm; /* Distance between navigation tabs */
+    margin-left: 0.8cm; /* Distance between navigation tabs */
 }
 
 .nav-link {
