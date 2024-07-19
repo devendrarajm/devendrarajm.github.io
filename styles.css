@@ -18,19 +18,38 @@ body {
     padding: 20px;
 }
 
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between name and nav */
+    padding: 10px 0; /* Reduced padding for a more compact look */
+    border-bottom: none;
+}
+
 .header .name {
+    font-size: 26px; /* Adjusted font size for name */
+    font-weight: bold;
+    margin: 0;
+    color: #000; /* Black color */
     white-space: nowrap; /* Prevent the name from breaking into multiple lines on desktop */
 }
 
-.header .name, .header nav {
-    position: relative;
-    top: -20px; /* Adjust this value to move both the name and the navigation tabs up */
+.header nav {
+    display: flex;
+    align-items: center;
+    margin: 0;
 }
 
 /* Mobile view styles */
 @media (max-width: 768px) { /* Adjust the max-width as needed for mobile view */
     .header .name {
         white-space: normal; /* Allow the name to break into multiple lines on mobile */
+        font-size: 22px; /* Adjusted font size for mobile view */
+    }
+
+    .header {
+        padding: 10px 0; /* Ensure compactness on mobile */
     }
 }
 
@@ -38,24 +57,10 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 0; /* Remove padding to avoid overlap */
     border-bottom: none;
 }
 
-.navbar-brand {
-    font-size: 26px; /* Adjusted font size for name */
-    font-weight: bold;
-    margin: 0;
-    margin-right: 2cm; /* Space between name and navigation tabs */
-}
-
-.navbar-brand a {
-    text-decoration: none; /* No underline */
-    color: #000; /* Black color */
-    display: inline; /* Remove any default link styling */
-}
-
-/* Navigation Tabs */
 .navbar-nav {
     list-style: none;
     margin: 0;
@@ -70,13 +75,9 @@ body {
 
 .nav-item a {
     padding: 0.5rem 0.75rem; /* Reduce padding for a more compact look */
-    font-size: 14px; /* Adjust font size for a more compact look */
-}
-
-.nav-link {
-    text-decoration: none;
+    font-size: 17px; /* Adjust font size to match body content size */
     color: #333;
-    font-size: 18px;
+    text-decoration: none;
 }
 
 /* Remove toggle button in desktop view */
@@ -93,7 +94,7 @@ body {
 .about {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 0.5cm;
+    margin-top: 0; /* Removed top margin for a more compact look */
     align-items: flex-start;
 }
 
@@ -310,4 +311,3 @@ p {
         font-size: 0.8rem;
     }
 }
-
