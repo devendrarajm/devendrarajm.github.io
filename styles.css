@@ -22,16 +22,15 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #ccc; /* Thin horizontal line */
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc; /* Thin horizontal line below name */
 }
 
 .navbar-brand {
-    font-size: 26px; /* Font size for the name */
+    font-size: 26px; /* Adjusted font size for name */
     font-weight: bold;
     margin: 0;
-    margin-left: 3.5cm; /* Move the name towards the left corner */
+    margin-right: 3cm; /* Space between name and navigation tabs */
 }
 
 .navbar-brand a {
@@ -40,36 +39,17 @@ body {
     display: inline; /* Remove any default link styling */
 }
 
-/* Ensure name appears in a single line, no URL link appearance */
-.navbar-brand a {
-    font-size: 26px; /* Consistent font size */
-    font-weight: bold;
-}
-
-/* Hide toggle button in desktop view */
-.toggle-button {
-    display: none;
-}
-
-/* Centering navigation tabs and adding a thin horizontal line */
+/* Navigation Tabs */
 .navbar-nav {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center navigation items */
-    border-bottom: 1px solid #ccc; /* Thin horizontal line */
-    padding-bottom: 10px; /* Add space below the horizontal line */
+    justify-content: flex-start; /* Align tabs to the right */
 }
 
 .nav-item {
-    margin-left: 1cm; /* Exact spacing between tabs */
-    margin-right: 1cm; /* Exact spacing to the right for consistency */
-}
-
-/* Remove spacing for the first item */
-.nav-item:first-child {
-    margin-left: 0;
+    margin-left: 1cm; /* Distance between navigation tabs */
 }
 
 .nav-link {
@@ -78,31 +58,17 @@ body {
     font-size: 18px;
 }
 
-/* Vertical line between profile photo and intro content */
-.profile-section {
-    display: flex;
-    align-items: center;
-    border-right: 1px solid #ccc; /* Thin vertical line */
-    padding-right: 20px;
+/* Remove toggle button in desktop view */
+.toggle-button {
+    display: none;
 }
 
-.profile-photo {
-    margin-right: 20px; /* Space between photo and content */
+/* Remove the horizontal and vertical lines */
+.navbar-divider {
+    display: none; /* Remove unnecessary divider */
 }
 
-.profile-intro {
-    flex: 1; /* Take up the remaining space */
-}
-
-/* Remove extra styling from other sections if not needed */
-.site-title {
-    margin: 0; /* Removed left margin */
-    font-weight: bold;
-    font-size: 24px; /* Consistent font size */
-    color: #000; /* Black color */
-    display: inline-block;
-}
-
+/* About Section Styles */
 .about {
     display: flex;
     flex-wrap: wrap;
