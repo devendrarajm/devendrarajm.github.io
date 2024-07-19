@@ -8,12 +8,12 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    font-size: 17px; /* Base font size */
+    font-size: 17px; /* Increased base font size */
 }
 
 .container {
     width: 85%;
-    max-width: 1050px; /* Max width for a compact layout */
+    max-width: 1050px; /* Reduced max-width for a more compact layout */
     margin: 0 auto; /* Center the container */
     padding: 20px;
 }
@@ -23,27 +23,31 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid #ccc;
 }
 
-.site-title {
-    font-size: 30px;
+.navbar-brand {
+    font-size: 28px;
     font-weight: bold;
     margin: 0;
 }
 
-.site-title a {
+.navbar-brand a {
     text-decoration: none;
     color: #000;
 }
 
 .toggle-button {
-    display: none; /* Hidden in desktop view */
+    display: none;
     font-size: 24px;
     border: none;
     background: none;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .navbar-nav {
@@ -51,19 +55,26 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center; /* Center navigation items */
 }
 
 .nav-item {
-    margin-left: 1.5cm; /* Spacing between tabs */
+    margin-left: 10px; /* Reduced spacing between tabs */
 }
 
 .nav-link {
     text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Adjusted the styling for the site title */
+.site-title {
+    margin: 0; /* Removed left margin */
+    font-weight: bold;
+    font-size: 30px; /* Slightly reduced font size */
     color: #000; /* Black color */
-    font-size: 18px; /* Consistent font size */
-    padding: 0.5rem;
+    display: inline-block;
 }
 
 /* Adjusted the divider styling */
@@ -92,6 +103,7 @@ body {
     width: auto;
     height: 4.5cm;
     margin-bottom: 10px;
+    margin-top: -1cm;
 }
 
 .about-links {
@@ -116,6 +128,7 @@ body {
     flex: 2;
     min-width: 300px;
     margin-left: 20px;
+    margin-top: -2.3cm;
 }
 
 .quarto-title {
@@ -135,10 +148,100 @@ p {
     color: #666;
 }
 
+/* Books Styles */
+.books {
+    margin-top: 2em;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+.book-item {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.book-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.book-cover {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.book-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.book-item .book-details p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.book-item .book-details a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.book-item .book-details a:hover {
+    background-color: #0056b3;
+}
+
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery-item {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.gallery-item img {
+    height: 7cm;
+    width: auto;
+    max-width: 100%;
+}
+
+/* Content Section Styles */
+.content-section p,
+.content-section li {
+    margin-bottom: 1em;
+}
+
+/* Talks Section Styles */
+.talks-section p {
+    margin-bottom: 1em;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .toggle-button {
-        display: block; /* Show only in mobile view */
+        display: block;
     }
 
     .navbar-nav {
@@ -157,7 +260,7 @@ p {
     }
 
     .nav-item {
-        margin: 10px 0; /* Vertical spacing for mobile view */
+        margin: 10px 0;
         text-align: center;
     }
 
@@ -181,5 +284,22 @@ p {
     .gallery-item img {
         height: auto;
         width: 100%;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .book-item {
+        padding: 15px;
+    }
+    
+    .book-item h3 {
+        font-size: 1rem;
+    }
+    
+    .book-item p {
+        font-size: 0.8rem;
     }
 }
