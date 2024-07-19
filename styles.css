@@ -59,7 +59,7 @@ body {
 }
 
 .nav-item {
-    margin-left: 20px;
+    margin-left: 10px; /* Reduced spacing between tabs */
 }
 
 .nav-link {
@@ -70,9 +70,11 @@ body {
 
 /* Adjusted the styling for the site title */
 .site-title {
-    margin-left: 10px;
+    margin: 0; /* Removed left margin */
     font-weight: bold;
     font-size: 30px; /* Slightly reduced font size */
+    color: #000; /* Black color */
+    display: inline-block;
 }
 
 /* Adjusted the divider styling */
