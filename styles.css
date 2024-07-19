@@ -1,7 +1,6 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap';
 
 /* General Styles */
-/* General Styles */
 body {
     font-family: "Roboto", sans-serif;
     background-color: #fff;
@@ -30,7 +29,7 @@ body {
 }
 
 .navbar-brand {
-    font-size: 26px; /* Updated font size for desktop view */
+    font-size: 24px; /* Adjusted font size to match heading requirements */
     font-weight: bold;
     margin: 0;
 }
@@ -38,34 +37,59 @@ body {
 .navbar-brand a {
     text-decoration: none; /* No underline */
     color: #000; /* Black color */
-    display: inline-block; /* Added to ensure consistent styling */
 }
 
 /* Ensure name appears in a single line, no URL link appearance */
 .navbar-brand a {
     display: inline; /* Remove any default link styling */
-    font-size: 26px; /* Consistent font size */
+    font-size: 24px; /* Consistent font size */
     font-weight: bold;
 }
 
+/* Remove toggle button in desktop view */
+.toggle-button {
+    display: none;
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center navigation items */
+}
+
+.nav-item {
+    margin-left: 1cm; /* Adjusted spacing between tabs */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Adjusted the styling for the site title */
 .site-title {
     margin: 0; /* Removed left margin */
     font-weight: bold;
-    font-size: 26px; /* Updated font size for desktop view */
+    font-size: 24px; /* Consistent font size */
     color: #000; /* Black color */
     display: inline-block;
 }
 
-/* Toggle button styles */
-.toggle-button {
-    display: none; /* Hide toggle button in desktop view */
+/* Adjusted the divider styling */
+.navbar-divider {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
 }
-
-/* Media query for mobile view */
-@media (max-width: 768px) {
-    .toggle-button {
-        display: block; /* Show toggle button in mobile view */
-    }
 
 /* About Section Styles */
 .about {
@@ -130,6 +154,7 @@ p {
     margin-top: 30px;
     font-size: 10px; /* Updated font size */
     color: #666;
+    font-weight: normal; /* Removed bold weight */
 }
 
 /* Books Styles */
@@ -138,7 +163,7 @@ p {
 }
 
 .section-title {
-    font-size: 24px; /* Updated font size */
+    font-size: 24px; /* Updated font size to match other headings */
     margin-bottom: 1em;
 }
 
