@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbarNav = document.querySelector('.navbar-nav');
     const navLinks = document.querySelectorAll('.nav-link');
 
+    if (!toggleButton || !navbarNav || navLinks.length === 0) {
+        console.error('Required elements not found in the DOM.');
+        return;
+    }
+
     // Toggle the navigation menu on mobile devices
     toggleButton.addEventListener('click', function() {
         console.log('Toggle button clicked');
@@ -31,12 +36,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Optional: Add smooth scrolling for anchor links
     // Comment out this section if it causes issues
-    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    //     anchor.addEventListener('click', function(e) {
-    //         e.preventDefault();
-    //         document.querySelector(this.getAttribute('href')).scrollIntoView({
-    //             behavior: 'smooth'
-    //         });
-    //     });
-    // });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                console.log(`Scrolling to: ${targetId}`);
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            } else {
+                console.error(`Target element ${targetId} not found.`);
+            }
+        });
+    });
 });
