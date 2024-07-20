@@ -18,25 +18,30 @@ body {
     padding: 20px;
 }
 
-/* Navbar Styles */
+/* Header Styles */
+header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #F7F7F7;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #ccc;
+    height: 100%;
+    padding: 0 20px;
 }
 
-.navbar-brand {
-    font-size: 28px;
+.site-title {
+    font-size: 26px;
     font-weight: bold;
     margin: 0;
-}
-
-.navbar-brand a {
+    color: #333;
     text-decoration: none;
-    color: #000;
 }
 
 .toggle-button {
@@ -45,9 +50,6 @@ body {
     border: none;
     background: none;
     cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
 }
 
 .navbar-nav {
@@ -55,7 +57,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center navigation items */
+    justify-content: center;
 }
 
 .nav-item {
@@ -66,19 +68,20 @@ body {
     text-decoration: none;
     color: #333;
     font-size: 18px;
+    padding: 5px 10px;
+    position: relative;
 }
 
-/* Adjusted the styling for the site title */
-.site-title {
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: 30px; /* Slightly reduced font size */
-}
-
-/* Adjusted the divider styling */
-.navbar-divider {
-    margin-top: 10px;
-    border-top: 1px solid #ccc;
+.nav-link:hover::after,
+.nav-link.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
 }
 
 /* About Section Styles */
