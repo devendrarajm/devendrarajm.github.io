@@ -5,54 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Inline styles for the gallery */
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .gallery-item {
-            width: calc(33.33% - 10px); /* Adjust this value to change the number of columns */
-            margin-bottom: 20px;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .gallery-item {
-                width: calc(50% - 10px); /* Adjust this value for mobile view */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-item {
-                width: 100%; /* Full width for very small screens */
-            }
-        }
-    </style>
 </head>
 <body>
     <header class="container">
-        <nav class="navbar">
-            <h1 class="navbar-brand"><a href="index.html">Devendraraj Madhanagopal</a></h1>
-            <button class="toggle-button" onclick="toggleNav()">☰</button>
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="employment.html" class="nav-link">Employment</a></li>
-                <li class="nav-item"><a href="books.html" class="nav-link">Books</a></li>
-                <li class="nav-item"><a href="publications.html" class="nav-link">Publications</a></li>
-                <li class="nav-item"><a href="talks.html" class="nav-link">Talks</a></li>
-                <li class="nav-item"><a href="awards.html" class="nav-link">Awards & Scholarships</a></li>
-                <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
-            </ul>
-        </nav>
+          <nav class="navbar">
+     <h1 class="navbar-brand"><a href="index.html">Devendraraj Madhanagopal</a></h1>
+     <button class="toggle-button" onclick="toggleNav()">☰</button>
+     <ul class="navbar-nav">
+       <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+       <li class="nav-item"><a href="employment.html" class="nav-link">Employment</a></li>
+       <li class="nav-item"><a href="books.html" class="nav-link">Books</a></li>
+       <li class="nav-item"><a href="publications.html" class="nav-link">Publications</a></li>
+       <li class="nav-item"><a href="talks.html" class="nav-link">Talks</a></li>
+       <li class="nav-item"><a href="awards.html" class="nav-link">Awards & Scholarships</a></li>
+       <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+     </ul>
+   </nav>
     </header>
 
     <section class="main-content container">
@@ -94,49 +62,6 @@
             </div>
             <div class="gallery-item">
                 <img src="scan0008.jpg" alt="Photo 12">
-            </div>
-            <!-- New images -->
-            <div class="gallery-item">
-                <img src="20230420_143536.jpg" alt="Photo 13">
-            </div>
-            <div class="gallery-item">
-                <img src="20230421_161356.jpg" alt="Photo 14">
-            </div>
-            <div class="gallery-item">
-                <img src="20230422_120222.jpg" alt="Photo 15">
-            </div>
-            <div class="gallery-item">
-                <img src="20230422_171833.jpg" alt="Photo 16">
-            </div>
-            <div class="gallery-item">
-                <img src="20230423_110146.jpg" alt="Photo 17">
-            </div>
-            <div class="gallery-item">
-                <img src="20230617_144357.jpg" alt="Photo 18">
-            </div>
-            <div class="gallery-item">
-                <img src="20231029_115737.jpg" alt="Photo 19">
-            </div>
-            <div class="gallery-item">
-                <img src="20231029_155945.jpg" alt="Photo 20">
-            </div>
-            <div class="gallery-item">
-                <img src="20231030_104927.jpg" alt="Photo 21">
-            </div>
-            <div class="gallery-item">
-                <img src="20231028_141519.jpg" alt="Photo 22">
-            </div>
-            <div class="gallery-item">
-                <img src="20231030_105253.jpg" alt="Photo 23">
-            </div>
-            <div class="gallery-item">
-                <img src="20231212_130701.jpg" alt="Photo 24">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG-20240710-WA0017.jpg" alt="Photo 25">
-            </div>
-            <div class="gallery-item">
-                <img src="reviewer award.png" alt="Photo 26">
             </div>
         </div>
     </section>
