@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Set active class on the current page link
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    console.log(`Current page: ${currentPage}`);
+    // Set active class on the current page link or anchor link
+    const currentHash = window.location.hash || '#home';
+    console.log(`Current hash: ${currentHash}`);
     navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
+        if (link.getAttribute('href') === currentHash) {
             link.classList.add('active');
             console.log(`Active link: ${link.getAttribute('href')}`);
         } else {
@@ -45,6 +45,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log(`Scrolling to: ${targetId}`);
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
+                });
+
+                // Update active class for the clicked link
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === targetId) {
+                        link.classList.add('active');
+                        console.log(`Active link: ${link.getAttribute('href')}`);
+                    } else {
+                        link.classList.remove('active');
+                    }
                 });
             } else {
                 console.error(`Target element ${targetId} not found.`);
