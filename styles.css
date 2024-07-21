@@ -111,8 +111,8 @@ body {
 }
 
 .about-link-icon {
-    width: 20px;
-    height: 20px;
+    width: 1cm; /* Adjusted size */
+    height: 1cm; /* Adjusted size */
     margin-right: 5px;
 }
 
@@ -135,8 +135,8 @@ body {
 }
 
 .email-box img {
-    width: 20px;
-    height: 20px;
+    width: 1cm; /* Adjusted size */
+    height: 1cm; /* Adjusted size */
     margin-right: 5px;
 }
 
