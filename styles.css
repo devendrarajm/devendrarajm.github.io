@@ -105,14 +105,14 @@ body {
     padding: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: auto; /* Adjust width as needed */
+    width: 120px; /* Adjust as needed */
     text-align: center;
-    font-size: 12px; /* Font size for desktop view */
+    font-size: 10px;
 }
 
 .about-link-icon {
-    width: 1cm; /* Adjusted size */
-    height: 1cm; /* Adjusted size */
+    width: 20px;
+    height: 20px;
     margin-right: 5px;
 }
 
@@ -122,98 +122,28 @@ body {
     color: #333;
 }
 
-.email-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 12px; /* Font size for desktop view */
+.about-contents {
+    flex: 2;
+    min-width: 300px;
+    margin-left: 20px;
+    margin-top: -2.3cm;
 }
 
-.email-box img {
-    width: 1cm; /* Adjusted size */
-    height: 1cm; /* Adjusted size */
-    margin-right: 5px;
+.quarto-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.email-box a {
-    text-decoration: none;
-    color: #333;
-    font-size: 12px; /* Font size for desktop view */
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .toggle-button {
-        display: block;
-    }
-
-    .navbar-nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #fff;
-        z-index: 1000;
-    }
-
-    .navbar-nav.active {
-        display: flex;
-    }
-
-    .nav-item {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .about {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-entity, .about-contents {
-        margin: 0;
-    }
-
-    .about-contents {
-        margin-top: 20px;
-    }
-
-    .about-link-box {
-        font-size: 8px; /* Font size for mobile view */
-    }
-
-    .gallery-item {
-        width: 100%;
-    }
-
-    .gallery-item img {
-        height: auto;
-        width: 100%;
-    }
-
-    .book-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 20px;
-    }
-    
-    .book-item {
-        padding: 15px;
-    }
-    
-    .book-item h3 {
-        font-size: 1rem;
-    }
-    
-    .book-item p {
-        font-size: 0.8rem;
-    }
+.copyright {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #666;
 }
 
 /* Books Styles */
@@ -306,11 +236,72 @@ body {
     margin-bottom: 1em;
 }
 
-/* About Section - Introduction Content */
-.intro-content p:last-of-type {
-    font-weight: normal; /* Ensure only the email is bolded */
-}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block;
+    }
 
-.intro-content p:last-of-type strong {
-    font-weight: bold; /* Bold only the email */
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        z-index: 1000;
+    }
+
+    .navbar-nav.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-entity, .about-contents {
+        margin: 0;
+    }
+
+    .about-contents {
+        margin-top: 20px;
+    }
+
+    .about-link-box {
+        font-size: 8px; /* Font size for mobile view */
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    .gallery-item img {
+        height: auto;
+        width: 100%;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .book-item {
+        padding: 15px;
+    }
+    
+    .book-item h3 {
+        font-size: 1rem;
+    }
+    
+    .book-item p {
+        font-size: 0.8rem;
+    }
 }
