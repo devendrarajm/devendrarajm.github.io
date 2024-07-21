@@ -93,19 +93,32 @@ body {
 .about-links {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
     margin-top: 10px;
 }
 
-.about-link {
-    width: 33.33%;
-    text-align: center;
+.about-link-box {
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    min-width: 150px; /* Minimum width to ensure readability */
 }
 
-.about-link img {
-    width: 40px;
-    height: 40px;
-    margin: 5px;
+.about-link-box img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.about-link-box span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 7px;
+    color: #333;
 }
 
 .about-contents {
