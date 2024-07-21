@@ -93,7 +93,6 @@ body {
 .about-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
     justify-content: center;
     margin-top: 10px;
 }
@@ -101,23 +100,25 @@ body {
 .about-link-box {
     display: flex;
     align-items: center;
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
+    justify-content: center;
+    margin: 5px;
     padding: 5px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    min-width: 150px; /* Minimum width to ensure readability */
+    width: 120px; /* Adjust as needed */
+    text-align: center;
+    font-size: 10px;
 }
 
-.about-link-box img {
-    width: 24px;
-    height: 24px;
+.about-link-icon {
+    width: 20px;
+    height: 20px;
     margin-right: 5px;
 }
 
-.about-link-box span {
-    font-family: 'Roboto', sans-serif;
-    font-size: 7px;
+.about-link-text {
+    font-size: 10px; /* Font size for desktop view */
+    text-decoration: none;
     color: #333;
 }
 
@@ -272,6 +273,10 @@ p {
 
     .about-contents {
         margin-top: 20px;
+    }
+
+    .about-link-box {
+        font-size: 7px; /* Font size for mobile view */
     }
 
     .gallery-item {
