@@ -3,65 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devendraraj Madhanagopal</title>
+    <title>Devendraraj Madhanagopal's Website</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="container">
-        <nav class="navbar">
-            <h1 class="navbar-brand"><a href="index.html">Devendraraj Madhanagopal</a></h1>
-            <button class="toggle-button" onclick="toggleNav()">☰</button>
-            <ul class="navbar-nav" id="nav-links">
-                <li class="nav-item"><a href="index.html#home" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="employment.html" class="nav-link">Employment</a></li>
-                <li class="nav-item"><a href="books.html" class="nav-link">Books</a></li>
-                <li class="nav-item"><a href="publications.html" class="nav-link">Publications</a></li>
-                <li class="nav-item"><a href="talks.html" class="nav-link">Talks</a></li>
-                <li class="nav-item"><a href="awards.html" class="nav-link">Awards & Scholarships</a></li>
-                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-            </ul>
+    <header class="navbar">
+        <div class="navbar-brand"><a href="#">Devendraraj Madhanagopal</a></div>
+        <button class="toggle-button">&#9776;</button>
+        <nav class="navbar-nav">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#employment" class="nav-link">Employment</a>
+            <a href="#books" class="nav-link">Books</a>
+            <a href="#publications" class="nav-link">Publications</a>
+            <a href="#talks" class="nav-link">Talks</a>
+            <a href="#awards" class="nav-link">Awards & Scholarships</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
         </nav>
     </header>
-    <main class="container">
-        <section id="home" class="about">
+
+    <div class="container">
+        <section class="about">
             <div class="about-entity">
-                <img src="Photo profile.jpg.jpg" alt="Profile Photo" class="about-image">
+                <img src="profile-photo.jpg" alt="Profile Photo" class="about-image">
                 <div class="about-links">
-                    <div class="about-link">
-                        <img src="google-scholar.png" alt="Google Scholar">
-                        <span>Google Scholar</span>
+                    <div class="about-link-box">
+                        <img src="google-scholar-logo.png" alt="Google Scholar" class="about-link-icon">
+                        <span class="about-link-text">Google Scholar</span>
                     </div>
-                    <div class="about-link">
-                        <img src="researchgate.png" alt="ResearchGate">
-                        <span>ResearchGate</span>
+                    <div class="about-link-box">
+                        <img src="researchgate-logo.png" alt="ResearchGate" class="about-link-icon">
+                        <span class="about-link-text">ResearchGate</span>
                     </div>
-                    <div class="about-link">
-                        <img src="routledge.png" alt="Routledge">
-                        <span>Routledge</span>
+                    <div class="about-link-box">
+                        <img src="linkedin-logo.png" alt="LinkedIn" class="about-link-icon">
+                        <span class="about-link-text">LinkedIn</span>
                     </div>
-                    <div class="about-link">
-                        <img src="fes.png" alt="Future Earth Coasts">
-                        <span>Future Earth Coasts</span>
-                    </div>
-                    <div class="about-link">
-                        <img src="gmail.png" alt="Email">
-                        <span>Gmail</span>
+                    <div class="about-link-box">
+                        <img src="twitter-logo.png" alt="Twitter" class="about-link-icon">
+                        <span class="about-link-text">Twitter</span>
                     </div>
                 </div>
             </div>
             <div class="about-contents">
-                <h2 class="quarto-title">Welcome to my website!</h2>
-                <p>Trained as an environmental sociologist, I have conducted research on environmental justice, climate change adaptation, climate policy, climate justice, and the social and political dimensions of climate change. I hold a Ph.D. in Sociology from the Department of Humanities and Social Sciences, Indian Institute of Technology Bombay (Mumbai, India). Since 2019, I have been a faculty member associated with the School of Sustainability at XIM University (Odisha, India).</p>
-
-                <p>I have published four books, including "Local Adaptation to Climate Change in South India: Challenges and the Future in the Tsunami-hit Coastal Regions" (Routledge, UK) and edited volumes related to climate change, environmental justice, climate justice, and socio-political perspectives of risks. As an academic, I have designed and delivered courses on environmental and social issues, gender, disaster management, sustainable development, environmental science, and public administration and governance programs.</p>
-
-                <p>I have received several international fellowships and travel grants over the years. I continue to network and collaborate with my peers in the United States, the Netherlands, France, Norway, China, Brazil, South Africa, and Kenya to strengthen my research and teaching. If you are interested in collaborating with me or to know more about my works, or any other queries, please do not hesitate to reach me out at <strong>devendraraj.mm@gmail.com</strong>.</p>
-
-                <p class="copyright">Copyright: Devendraraj Madhanagopal, 2024</p>
+                <p>Welcome to my academic profile. I am an experienced academic with a PhD in Environmental Sociology. My research focuses on environmental issues with a specific emphasis on coastal governance, marine fishing communities, and environmental justice.</p>
+                <p>In addition to my research, I teach courses related to environment and development, and actively engage in discussions around climate change and social justice.</p>
+                <p>Feel free to explore my <a href="#publications">publications</a>, <a href="#books">books</a>, and <a href="#talks">talks</a>. For any inquiries or further information, please do not hesitate to reach me out at <strong>devendraraj.mm@gmail.com</strong>.</p>
             </div>
         </section>
-    </main>
-    <script src="script.js"></script>
+        
+        <!-- Other Sections (Books, Publications, Talks, Awards & Scholarships, Gallery) go here -->
+
+        <footer class="copyright">
+            <p>&copy; 2024 Devendraraj Madhanagopal. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle mobile navigation menu
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+            document.querySelector('.navbar-nav').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
