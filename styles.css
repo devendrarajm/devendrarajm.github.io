@@ -105,7 +105,7 @@ body {
     padding: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 100px; /* Adjusted width to make it more compact */
+    width: 120px; /* Adjusted width to make it more compact */
     text-align: center;
     font-size: 10px;
     text-decoration: none; /* Ensure links are styled as buttons */
