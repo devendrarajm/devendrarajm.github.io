@@ -29,23 +29,31 @@
                 <img src="Photo profile.jpg.jpg" alt="Profile Photo" class="about-image">
                 <div class="about-links">
                     <div class="about-link-box">
-                        <img src="google-scholar.png" alt="Google Scholar" class="about-link-icon">
+                        <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">
+                            <img src="google-scholar.png" alt="Google Scholar" class="about-link-icon">
+                        </a>
                         <span class="about-link-text">Google Scholar</span>
                     </div>
                     <div class="about-link-box">
-                        <img src="researchgate.png" alt="ResearchGate" class="about-link-icon">
+                        <a href="https://www.researchgate.net/profile/Your_Profile" target="_blank">
+                            <img src="researchgate.png" alt="ResearchGate" class="about-link-icon">
+                        </a>
                         <span class="about-link-text">ResearchGate</span>
                     </div>
                     <div class="about-link-box">
-                        <img src="routledge.png" alt="Routledge" class="about-link-icon">
+                        <a href="https://www.routledge.com/Your_Book/p/book/9780367336806" target="_blank">
+                            <img src="routledge.png" alt="Routledge" class="about-link-icon">
+                        </a>
                         <span class="about-link-text">Routledge</span>
                     </div>
                     <div class="about-link-box">
-                        <img src="fes.png" alt="Future Earth Coasts" class="about-link-icon">
+                        <a href="https://futureearth.org/coasts/" target="_blank">
+                            <img src="fes.png" alt="Future Earth Coasts" class="about-link-icon">
+                        </a>
                         <span class="about-link-text">Future Earth Coasts</span>
                     </div>
                     <div class="about-link-box">
-                        <img src="gmail.png" alt="Email" class="about-link-icon">
+                        <img src="gmail.png" alt="Email" class="about-link-icon" id="email-logo">
                         <span class="about-link-text">Email</span>
                     </div>
                 </div>
@@ -63,5 +71,16 @@
         </section>
     </main>
     <script src="script.js"></script>
+    <script>
+        // JavaScript to handle email copy functionality
+        document.getElementById('email-logo').addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            navigator.clipboard.writeText('devendraraj.mm@gmail.com').then(function() {
+                alert('Email address copied to clipboard.');
+            }, function() {
+                alert('Failed to copy email address.');
+            });
+        });
+    </script>
 </body>
 </html>
