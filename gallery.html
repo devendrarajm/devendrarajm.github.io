@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,44 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery</title>
     <link rel="stylesheet" href="styles.css">
+
     <style>
-        /* Inline styles for the gallery */
+        /* Modern responsive masonry gallery */
+
         .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            column-count: 3;
+            column-gap: 18px;
+            width: 100%;
+            margin: 25px auto;
         }
 
         .gallery-item {
-            width: calc(33.33% - 10px); /* Adjust this value to change the number of columns */
-            margin-bottom: 20px;
+            display: inline-block;
+            width: 100%;
+            margin: 0 0 18px;
+            break-inside: avoid;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #f5f5f5;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .gallery-item img {
+            display: block;
             width: 100%;
             height: auto;
-            display: block;
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+            transition: transform 0.35s ease;
         }
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .gallery-item {
-                width: calc(50% - 10px); /* Adjust this value for mobile view */
+        /* Desktop hover effect */
+
+        @media (hover: hover) {
+            .gallery-item:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+            }
+
+            .gallery-item:hover img {
+                transform: scale(1.02);
             }
         }
 
-        @media (max-width: 480px) {
+        /* Tablet */
+
+        @media (max-width: 900px) {
+            .gallery {
+                column-count: 2;
+                column-gap: 14px;
+            }
+
             .gallery-item {
-                width: 100%; /* Full width for very small screens */
+                margin-bottom: 14px;
+            }
+        }
+
+        /* Mobile */
+
+        @media (max-width: 520px) {
+            .gallery {
+                column-count: 1;
+                column-gap: 0;
+            }
+
+            .gallery-item {
+                margin-bottom: 16px;
+                border-radius: 8px;
+            }
+
+            .gallery-item img {
+                border-radius: 8px;
             }
         }
     </style>
 </head>
+
 <body>
+
     <header class="container">
         <nav class="navbar">
-            <h1 class="navbar-brand"><a href="index.html">Devendraraj Madhanagopal</a></h1>
+            <h1 class="navbar-brand">
+                <a href="index.html">Devendraraj Madhanagopal</a>
+            </h1>
+
             <button class="toggle-button" onclick="toggleNav()">☰</button>
+
             <ul class="navbar-nav">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="employment.html" class="nav-link">Employment</a></li>
@@ -56,165 +108,212 @@
     </header>
 
     <section class="main-content container">
+
         <h2>Photo Gallery</h2>
 
         <div class="gallery">
-            <div class="gallery-item">
-                <img src="IMG_20190919_180012_1.jpg" alt="Photo 1">
-            </div>
-            <div class="gallery-item">
-                <img src="20230418_175736.jpg" alt="Photo 2">
-            </div>
-            <div class="gallery-item">
-                <img src="20230421_172536.jpg" alt="Photo 3">
-            </div>
-            <div class="gallery-item">
-                <img src="20230614_154310.jpg" alt="Photo 4">
-            </div>
-            <div class="gallery-item">
-                <img src="20230615_161107 (1).jpg" alt="Photo 5">
-            </div>
-            <div class="gallery-item">
-                <img src="20230616_202301.jpg" alt="Photo 6">
-            </div>
-            <div class="gallery-item">
-                <img src="WechatIMG744 (2).png" alt="Photo 7">
-            </div>
-            <div class="gallery-item">
-                <img src="20231027_154636 (1).jpg" alt="Photo 8">
-            </div>
-            <div class="gallery-item">
-                <img src="20231027_165443.jpg" alt="Photo 9">
-            </div>
-            <div class="gallery-item">
-                <img src="20231030_164046.jpg" alt="Photo 10">
-            </div>
-            <div class="gallery-item">
-                <img src="20231031_152453.jpg" alt="Photo 11">
-            </div>
-            <div class="gallery-item">
-                <img src="scan0008.jpg" alt="Photo 12">
-            </div>
-            <!-- New images -->
-            <div class="gallery-item">
-                <img src="20230420_143536.jpg" alt="Photo 13">
-            </div>
-            <div class="gallery-item">
-                <img src="20230421_161356.jpg" alt="Photo 14">
-            </div>
-            <div class="gallery-item">
-                <img src="20230422_120222.jpg" alt="Photo 15">
-            </div>
-            <div class="gallery-item">
-                <img src="20230422_171833.jpg" alt="Photo 16">
-            </div>
-            <div class="gallery-item">
-                <img src="20230423_110146.jpg" alt="Photo 17">
-            </div>
-            <div class="gallery-item">
-                <img src="20230617_144357.jpg" alt="Photo 18">
-            </div>
-            <div class="gallery-item">
-                <img src="20231029_115737.jpg" alt="Photo 19">
-            </div>
-            <div class="gallery-item">
-                <img src="20231029_155945.jpg" alt="Photo 20">
-            </div>
-            <div class="gallery-item">
-                <img src="20231030_104927.jpg" alt="Photo 21">
-            </div>
-            <div class="gallery-item">
-                <img src="20231028_141519.jpg" alt="Photo 22">
-            </div>
-            <div class="gallery-item">
-                <img src="20231030_105253.jpg" alt="Photo 23">
-            </div>
-            <div class="gallery-item">
-                <img src="20231212_130701.jpg" alt="Photo 24">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG-20240710-WA0017.jpg" alt="Photo 25">
-            </div>
-            <div class="gallery-item">
-                <img src="reviewer award.png" alt="Photo 26">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG-20180606-WA0007.jpg" alt="Photo 27">
-            </div>
-            <div class="gallery-item">
-                <img src="P_20181109_122852.jpg" alt="Photo 28">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG_1946.jpg" alt="Photo 29">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG_20180603_163838.jpg" alt="Photo 30">
-            </div>
-            <div class="gallery-item">
-                <img src="DSC01669_2.jpg" alt="Photo 31">
-            </div>
-            <div class="gallery-item">
-                <img src="P_20180608_113030.jpg" alt="Photo 32">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG-20180815-WA0041.jpg" alt="Photo 33">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG-20250315-WA0009.jpg" alt="Photo 34">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG-20250315-WA0018.jpg" alt="Photo 35">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG20250315161200.jpg" alt="Photo 36">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG20250313161014.jpg" alt="Photo 37">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG20250313142504.jpg" alt="Photo 38">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG20250311133620.jpg" alt="Photo 39">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG20251011144911 (1).jpg" alt="Photo 40">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG20251008142051_01 (1).jpg" alt="Photo 41">
-            </div>
-            
-<div class="gallery-item">
-    <img src="IMG20250624094332.jpg" alt="Photo 42">
-</div>
-<div class="gallery-item">
-    <img src="IMG20250624094305.jpg" alt="Photo 43">
-</div>
-<div class="gallery-item">
-    <img src="20261005_152025.jpg" alt="Photo 44">
-</div>
-<div class="gallery-item">
-    <img src="20261105_154120.jpg" alt="Photo 45">
-</div>
-<div class="gallery-item">
-    <img src="file_0000000054b081f4a71c08aac997cafd.png" alt="Photo 46">
-</div>
-<div class="gallery-item">
-    <img src="20261008_132135.jpg" alt="Photo 47">
-</div>
-<div class="gallery-item">
-    <img src="20261105_172058.jpg" alt="Photo 48">
-</div>
-<div class="gallery-item">
-    <img src="IMG-20261107-WA0058.jpg" alt="Photo 49">
-</div>
-<div class="gallery-item">
-    <img src="2026-11-07 22_43_51.872+0530.jpg" alt="Photo 50">
-</div>
 
+            <div class="gallery-item">
+                <img src="IMG_20190919_180012_1.jpg" alt="Photo 1" loading="lazy">
             </div>
+
+            <div class="gallery-item">
+                <img src="20230418_175736.jpg" alt="Photo 2" loading="lazy">
             </div>
+
+            <div class="gallery-item">
+                <img src="20230421_172536.jpg" alt="Photo 3" loading="lazy">
             </div>
+
+            <div class="gallery-item">
+                <img src="20230614_154310.jpg" alt="Photo 4" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20230615_161107 (1).jpg" alt="Photo 5" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20230616_202301.jpg" alt="Photo 6" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="WechatIMG744 (2).png" alt="Photo 7" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20231027_154636 (1).jpg" alt="Photo 8" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20231027_165443.jpg" alt="Photo 9" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20231030_164046.jpg" alt="Photo 10" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20231031_152453.jpg" alt="Photo 11" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="scan0008.jpg" alt="Photo 12" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20230420_143536.jpg" alt="Photo 13" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20230421_161356.jpg" alt="Photo 14" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20230422_120222.jpg" alt="Photo 15" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20230422_171833.jpg" alt="Photo 16" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20230423_110146.jpg" alt="Photo 17" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20230617_144357.jpg" alt="Photo 18" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20231029_115737.jpg" alt="Photo 19" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20231029_155945.jpg" alt="Photo 20" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20231030_104927.jpg" alt="Photo 21" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20231028_141519.jpg" alt="Photo 22" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20231030_105253.jpg" alt="Photo 23" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20231212_130701.jpg" alt="Photo 24" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG-20240710-WA0017.jpg" alt="Photo 25" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="reviewer award.png" alt="Photo 26" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG-20180606-WA0007.jpg" alt="Photo 27" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="P_20181109_122852.jpg" alt="Photo 28" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG_1946.jpg" alt="Photo 29" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG_20180603_163838.jpg" alt="Photo 30" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="DSC01669_2.jpg" alt="Photo 31" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="P_20180608_113030.jpg" alt="Photo 32" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG-20180815-WA0041.jpg" alt="Photo 33" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG-20250315-WA0009.jpg" alt="Photo 34" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG-20250315-WA0018.jpg" alt="Photo 35" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG20250315161200.jpg" alt="Photo 36" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG20250313161014.jpg" alt="Photo 37" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG20250313142504.jpg" alt="Photo 38" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG20250311133620.jpg" alt="Photo 39" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG20251011144911 (1).jpg" alt="Photo 40" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG20251008142051_01 (1).jpg" alt="Photo 41" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG20250624094332.jpg" alt="Photo 42" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG20250624094305.jpg" alt="Photo 43" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20261005_152025.jpg" alt="Photo 44" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20261105_154120.jpg" alt="Photo 45" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="file_0000000054b081f4a71c08aac997cafd.png" alt="Photo 46" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20261008_132135.jpg" alt="Photo 47" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="20261105_172058.jpg" alt="Photo 48" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="IMG-20261107-WA0058.jpg" alt="Photo 49" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="2026-11-07 22_43_51.872+0530.jpg" alt="Photo 50" loading="lazy">
+            </div>
+
+        </div>
     </section>
 
     <footer class="container">
@@ -222,5 +321,7 @@
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
+
